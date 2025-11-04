@@ -14,7 +14,7 @@ class LoginPage extends HookConsumerWidget {
       next.maybeWhen(
         success: () {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Login Successful')),
+            const SnackBar(content: Text('Login Successfuly complted')),
           );
         },
         failure: (failure) {
