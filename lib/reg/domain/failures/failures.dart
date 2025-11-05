@@ -3,6 +3,10 @@ part 'failures.freezed.dart';
 
 @freezed
 class RegFailures with _$RegFailures { 
+  const factory RegFailures.emailValidationError({String? message}) = EmailValidationError;
+  const factory RegFailures.passwordValidationError({String? message}) = PasswordValidationError;
+  const factory RegFailures.phoneNumber({String? message}) = phoneNumber;
+  const factory RegFailures.dob({String? message}) = dob;
   const factory RegFailures.networkFailure({String? message}) = NetworkFailure; 
   const factory RegFailures.badRequest({String? message}) = BadRequest; 
   const factory RegFailures.tokenExpired({String? message}) = TokenExpired; 

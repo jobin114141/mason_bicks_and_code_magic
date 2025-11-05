@@ -10,6 +10,8 @@ class LoginPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final emailController = useTextEditingController();
     final passwordController = useTextEditingController();
+
+    
     ref.listen<LoginState>(loginNotifierProvider, (previous, next) {
       next.maybeWhen(
         success: () {

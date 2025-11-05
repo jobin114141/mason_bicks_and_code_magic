@@ -19,6 +19,10 @@ mixin _$RegFailures {
   String? get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -31,6 +35,10 @@ mixin _$RegFailures {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -43,6 +51,10 @@ mixin _$RegFailures {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -56,6 +68,11 @@ mixin _$RegFailures {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -68,6 +85,10 @@ mixin _$RegFailures {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -80,6 +101,10 @@ mixin _$RegFailures {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -132,6 +157,830 @@ class _$RegFailuresCopyWithImpl<$Res, $Val extends RegFailures>
               as String?,
     ) as $Val);
   }
+}
+
+/// @nodoc
+abstract class _$$EmailValidationErrorImplCopyWith<$Res>
+    implements $RegFailuresCopyWith<$Res> {
+  factory _$$EmailValidationErrorImplCopyWith(_$EmailValidationErrorImpl value,
+          $Res Function(_$EmailValidationErrorImpl) then) =
+      __$$EmailValidationErrorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$EmailValidationErrorImplCopyWithImpl<$Res>
+    extends _$RegFailuresCopyWithImpl<$Res, _$EmailValidationErrorImpl>
+    implements _$$EmailValidationErrorImplCopyWith<$Res> {
+  __$$EmailValidationErrorImplCopyWithImpl(_$EmailValidationErrorImpl _value,
+      $Res Function(_$EmailValidationErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$EmailValidationErrorImpl(
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EmailValidationErrorImpl implements EmailValidationError {
+  const _$EmailValidationErrorImpl({this.message});
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'RegFailures.emailValidationError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EmailValidationErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EmailValidationErrorImplCopyWith<_$EmailValidationErrorImpl>
+      get copyWith =>
+          __$$EmailValidationErrorImplCopyWithImpl<_$EmailValidationErrorImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
+    required TResult Function(String? message) networkFailure,
+    required TResult Function(String? message) badRequest,
+    required TResult Function(String? message) tokenExpired,
+    required TResult Function(String? message) unexpected,
+    required TResult Function(String? message) noTokenAvailable,
+    required TResult Function(String? message) notFound,
+    required TResult Function(String? message) notAcceptable,
+    required TResult Function(String? message) serverError,
+  }) {
+    return emailValidationError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
+    TResult? Function(String? message)? networkFailure,
+    TResult? Function(String? message)? badRequest,
+    TResult? Function(String? message)? tokenExpired,
+    TResult? Function(String? message)? unexpected,
+    TResult? Function(String? message)? noTokenAvailable,
+    TResult? Function(String? message)? notFound,
+    TResult? Function(String? message)? notAcceptable,
+    TResult? Function(String? message)? serverError,
+  }) {
+    return emailValidationError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
+    TResult Function(String? message)? networkFailure,
+    TResult Function(String? message)? badRequest,
+    TResult Function(String? message)? tokenExpired,
+    TResult Function(String? message)? unexpected,
+    TResult Function(String? message)? noTokenAvailable,
+    TResult Function(String? message)? notFound,
+    TResult Function(String? message)? notAcceptable,
+    TResult Function(String? message)? serverError,
+    required TResult orElse(),
+  }) {
+    if (emailValidationError != null) {
+      return emailValidationError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
+    required TResult Function(NetworkFailure value) networkFailure,
+    required TResult Function(BadRequest value) badRequest,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(Unexpected value) unexpected,
+    required TResult Function(NoTokenAvailable value) noTokenAvailable,
+    required TResult Function(NotFound value) notFound,
+    required TResult Function(NotAcceptable value) notAcceptable,
+    required TResult Function(ServerError value) serverError,
+  }) {
+    return emailValidationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
+    TResult? Function(NetworkFailure value)? networkFailure,
+    TResult? Function(BadRequest value)? badRequest,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(Unexpected value)? unexpected,
+    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult? Function(NotFound value)? notFound,
+    TResult? Function(NotAcceptable value)? notAcceptable,
+    TResult? Function(ServerError value)? serverError,
+  }) {
+    return emailValidationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
+    TResult Function(NetworkFailure value)? networkFailure,
+    TResult Function(BadRequest value)? badRequest,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(Unexpected value)? unexpected,
+    TResult Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult Function(NotFound value)? notFound,
+    TResult Function(NotAcceptable value)? notAcceptable,
+    TResult Function(ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (emailValidationError != null) {
+      return emailValidationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EmailValidationError implements RegFailures {
+  const factory EmailValidationError({final String? message}) =
+      _$EmailValidationErrorImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EmailValidationErrorImplCopyWith<_$EmailValidationErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PasswordValidationErrorImplCopyWith<$Res>
+    implements $RegFailuresCopyWith<$Res> {
+  factory _$$PasswordValidationErrorImplCopyWith(
+          _$PasswordValidationErrorImpl value,
+          $Res Function(_$PasswordValidationErrorImpl) then) =
+      __$$PasswordValidationErrorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$PasswordValidationErrorImplCopyWithImpl<$Res>
+    extends _$RegFailuresCopyWithImpl<$Res, _$PasswordValidationErrorImpl>
+    implements _$$PasswordValidationErrorImplCopyWith<$Res> {
+  __$$PasswordValidationErrorImplCopyWithImpl(
+      _$PasswordValidationErrorImpl _value,
+      $Res Function(_$PasswordValidationErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$PasswordValidationErrorImpl(
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PasswordValidationErrorImpl implements PasswordValidationError {
+  const _$PasswordValidationErrorImpl({this.message});
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'RegFailures.passwordValidationError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PasswordValidationErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PasswordValidationErrorImplCopyWith<_$PasswordValidationErrorImpl>
+      get copyWith => __$$PasswordValidationErrorImplCopyWithImpl<
+          _$PasswordValidationErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
+    required TResult Function(String? message) networkFailure,
+    required TResult Function(String? message) badRequest,
+    required TResult Function(String? message) tokenExpired,
+    required TResult Function(String? message) unexpected,
+    required TResult Function(String? message) noTokenAvailable,
+    required TResult Function(String? message) notFound,
+    required TResult Function(String? message) notAcceptable,
+    required TResult Function(String? message) serverError,
+  }) {
+    return passwordValidationError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
+    TResult? Function(String? message)? networkFailure,
+    TResult? Function(String? message)? badRequest,
+    TResult? Function(String? message)? tokenExpired,
+    TResult? Function(String? message)? unexpected,
+    TResult? Function(String? message)? noTokenAvailable,
+    TResult? Function(String? message)? notFound,
+    TResult? Function(String? message)? notAcceptable,
+    TResult? Function(String? message)? serverError,
+  }) {
+    return passwordValidationError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
+    TResult Function(String? message)? networkFailure,
+    TResult Function(String? message)? badRequest,
+    TResult Function(String? message)? tokenExpired,
+    TResult Function(String? message)? unexpected,
+    TResult Function(String? message)? noTokenAvailable,
+    TResult Function(String? message)? notFound,
+    TResult Function(String? message)? notAcceptable,
+    TResult Function(String? message)? serverError,
+    required TResult orElse(),
+  }) {
+    if (passwordValidationError != null) {
+      return passwordValidationError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
+    required TResult Function(NetworkFailure value) networkFailure,
+    required TResult Function(BadRequest value) badRequest,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(Unexpected value) unexpected,
+    required TResult Function(NoTokenAvailable value) noTokenAvailable,
+    required TResult Function(NotFound value) notFound,
+    required TResult Function(NotAcceptable value) notAcceptable,
+    required TResult Function(ServerError value) serverError,
+  }) {
+    return passwordValidationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
+    TResult? Function(NetworkFailure value)? networkFailure,
+    TResult? Function(BadRequest value)? badRequest,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(Unexpected value)? unexpected,
+    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult? Function(NotFound value)? notFound,
+    TResult? Function(NotAcceptable value)? notAcceptable,
+    TResult? Function(ServerError value)? serverError,
+  }) {
+    return passwordValidationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
+    TResult Function(NetworkFailure value)? networkFailure,
+    TResult Function(BadRequest value)? badRequest,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(Unexpected value)? unexpected,
+    TResult Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult Function(NotFound value)? notFound,
+    TResult Function(NotAcceptable value)? notAcceptable,
+    TResult Function(ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (passwordValidationError != null) {
+      return passwordValidationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PasswordValidationError implements RegFailures {
+  const factory PasswordValidationError({final String? message}) =
+      _$PasswordValidationErrorImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PasswordValidationErrorImplCopyWith<_$PasswordValidationErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$phoneNumberImplCopyWith<$Res>
+    implements $RegFailuresCopyWith<$Res> {
+  factory _$$phoneNumberImplCopyWith(
+          _$phoneNumberImpl value, $Res Function(_$phoneNumberImpl) then) =
+      __$$phoneNumberImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$phoneNumberImplCopyWithImpl<$Res>
+    extends _$RegFailuresCopyWithImpl<$Res, _$phoneNumberImpl>
+    implements _$$phoneNumberImplCopyWith<$Res> {
+  __$$phoneNumberImplCopyWithImpl(
+      _$phoneNumberImpl _value, $Res Function(_$phoneNumberImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$phoneNumberImpl(
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$phoneNumberImpl implements phoneNumber {
+  const _$phoneNumberImpl({this.message});
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'RegFailures.phoneNumber(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$phoneNumberImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$phoneNumberImplCopyWith<_$phoneNumberImpl> get copyWith =>
+      __$$phoneNumberImplCopyWithImpl<_$phoneNumberImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
+    required TResult Function(String? message) networkFailure,
+    required TResult Function(String? message) badRequest,
+    required TResult Function(String? message) tokenExpired,
+    required TResult Function(String? message) unexpected,
+    required TResult Function(String? message) noTokenAvailable,
+    required TResult Function(String? message) notFound,
+    required TResult Function(String? message) notAcceptable,
+    required TResult Function(String? message) serverError,
+  }) {
+    return phoneNumber(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
+    TResult? Function(String? message)? networkFailure,
+    TResult? Function(String? message)? badRequest,
+    TResult? Function(String? message)? tokenExpired,
+    TResult? Function(String? message)? unexpected,
+    TResult? Function(String? message)? noTokenAvailable,
+    TResult? Function(String? message)? notFound,
+    TResult? Function(String? message)? notAcceptable,
+    TResult? Function(String? message)? serverError,
+  }) {
+    return phoneNumber?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
+    TResult Function(String? message)? networkFailure,
+    TResult Function(String? message)? badRequest,
+    TResult Function(String? message)? tokenExpired,
+    TResult Function(String? message)? unexpected,
+    TResult Function(String? message)? noTokenAvailable,
+    TResult Function(String? message)? notFound,
+    TResult Function(String? message)? notAcceptable,
+    TResult Function(String? message)? serverError,
+    required TResult orElse(),
+  }) {
+    if (phoneNumber != null) {
+      return phoneNumber(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
+    required TResult Function(NetworkFailure value) networkFailure,
+    required TResult Function(BadRequest value) badRequest,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(Unexpected value) unexpected,
+    required TResult Function(NoTokenAvailable value) noTokenAvailable,
+    required TResult Function(NotFound value) notFound,
+    required TResult Function(NotAcceptable value) notAcceptable,
+    required TResult Function(ServerError value) serverError,
+  }) {
+    return phoneNumber(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
+    TResult? Function(NetworkFailure value)? networkFailure,
+    TResult? Function(BadRequest value)? badRequest,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(Unexpected value)? unexpected,
+    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult? Function(NotFound value)? notFound,
+    TResult? Function(NotAcceptable value)? notAcceptable,
+    TResult? Function(ServerError value)? serverError,
+  }) {
+    return phoneNumber?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
+    TResult Function(NetworkFailure value)? networkFailure,
+    TResult Function(BadRequest value)? badRequest,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(Unexpected value)? unexpected,
+    TResult Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult Function(NotFound value)? notFound,
+    TResult Function(NotAcceptable value)? notAcceptable,
+    TResult Function(ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (phoneNumber != null) {
+      return phoneNumber(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class phoneNumber implements RegFailures {
+  const factory phoneNumber({final String? message}) = _$phoneNumberImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$phoneNumberImplCopyWith<_$phoneNumberImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$dobImplCopyWith<$Res> implements $RegFailuresCopyWith<$Res> {
+  factory _$$dobImplCopyWith(_$dobImpl value, $Res Function(_$dobImpl) then) =
+      __$$dobImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$dobImplCopyWithImpl<$Res>
+    extends _$RegFailuresCopyWithImpl<$Res, _$dobImpl>
+    implements _$$dobImplCopyWith<$Res> {
+  __$$dobImplCopyWithImpl(_$dobImpl _value, $Res Function(_$dobImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$dobImpl(
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$dobImpl implements dob {
+  const _$dobImpl({this.message});
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'RegFailures.dob(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$dobImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$dobImplCopyWith<_$dobImpl> get copyWith =>
+      __$$dobImplCopyWithImpl<_$dobImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
+    required TResult Function(String? message) networkFailure,
+    required TResult Function(String? message) badRequest,
+    required TResult Function(String? message) tokenExpired,
+    required TResult Function(String? message) unexpected,
+    required TResult Function(String? message) noTokenAvailable,
+    required TResult Function(String? message) notFound,
+    required TResult Function(String? message) notAcceptable,
+    required TResult Function(String? message) serverError,
+  }) {
+    return dob(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
+    TResult? Function(String? message)? networkFailure,
+    TResult? Function(String? message)? badRequest,
+    TResult? Function(String? message)? tokenExpired,
+    TResult? Function(String? message)? unexpected,
+    TResult? Function(String? message)? noTokenAvailable,
+    TResult? Function(String? message)? notFound,
+    TResult? Function(String? message)? notAcceptable,
+    TResult? Function(String? message)? serverError,
+  }) {
+    return dob?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
+    TResult Function(String? message)? networkFailure,
+    TResult Function(String? message)? badRequest,
+    TResult Function(String? message)? tokenExpired,
+    TResult Function(String? message)? unexpected,
+    TResult Function(String? message)? noTokenAvailable,
+    TResult Function(String? message)? notFound,
+    TResult Function(String? message)? notAcceptable,
+    TResult Function(String? message)? serverError,
+    required TResult orElse(),
+  }) {
+    if (dob != null) {
+      return dob(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
+    required TResult Function(NetworkFailure value) networkFailure,
+    required TResult Function(BadRequest value) badRequest,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(Unexpected value) unexpected,
+    required TResult Function(NoTokenAvailable value) noTokenAvailable,
+    required TResult Function(NotFound value) notFound,
+    required TResult Function(NotAcceptable value) notAcceptable,
+    required TResult Function(ServerError value) serverError,
+  }) {
+    return dob(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
+    TResult? Function(NetworkFailure value)? networkFailure,
+    TResult? Function(BadRequest value)? badRequest,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(Unexpected value)? unexpected,
+    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult? Function(NotFound value)? notFound,
+    TResult? Function(NotAcceptable value)? notAcceptable,
+    TResult? Function(ServerError value)? serverError,
+  }) {
+    return dob?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
+    TResult Function(NetworkFailure value)? networkFailure,
+    TResult Function(BadRequest value)? badRequest,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(Unexpected value)? unexpected,
+    TResult Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult Function(NotFound value)? notFound,
+    TResult Function(NotAcceptable value)? notAcceptable,
+    TResult Function(ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (dob != null) {
+      return dob(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class dob implements RegFailures {
+  const factory dob({final String? message}) = _$dobImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$dobImplCopyWith<_$dobImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -205,6 +1054,10 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -220,6 +1073,10 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -235,6 +1092,10 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -254,6 +1115,11 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -269,6 +1135,10 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -284,6 +1154,10 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -385,6 +1259,10 @@ class _$BadRequestImpl implements BadRequest {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -400,6 +1278,10 @@ class _$BadRequestImpl implements BadRequest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -415,6 +1297,10 @@ class _$BadRequestImpl implements BadRequest {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -434,6 +1320,11 @@ class _$BadRequestImpl implements BadRequest {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -449,6 +1340,10 @@ class _$BadRequestImpl implements BadRequest {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -464,6 +1359,10 @@ class _$BadRequestImpl implements BadRequest {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -565,6 +1464,10 @@ class _$TokenExpiredImpl implements TokenExpired {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -580,6 +1483,10 @@ class _$TokenExpiredImpl implements TokenExpired {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -595,6 +1502,10 @@ class _$TokenExpiredImpl implements TokenExpired {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -614,6 +1525,11 @@ class _$TokenExpiredImpl implements TokenExpired {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -629,6 +1545,10 @@ class _$TokenExpiredImpl implements TokenExpired {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -644,6 +1564,10 @@ class _$TokenExpiredImpl implements TokenExpired {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -745,6 +1669,10 @@ class _$UnexpectedImpl implements Unexpected {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -760,6 +1688,10 @@ class _$UnexpectedImpl implements Unexpected {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -775,6 +1707,10 @@ class _$UnexpectedImpl implements Unexpected {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -794,6 +1730,11 @@ class _$UnexpectedImpl implements Unexpected {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -809,6 +1750,10 @@ class _$UnexpectedImpl implements Unexpected {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -824,6 +1769,10 @@ class _$UnexpectedImpl implements Unexpected {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -926,6 +1875,10 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -941,6 +1894,10 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -956,6 +1913,10 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -975,6 +1936,11 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -990,6 +1956,10 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -1005,6 +1975,10 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -1107,6 +2081,10 @@ class _$NotFoundImpl implements NotFound {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -1122,6 +2100,10 @@ class _$NotFoundImpl implements NotFound {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -1137,6 +2119,10 @@ class _$NotFoundImpl implements NotFound {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -1156,6 +2142,11 @@ class _$NotFoundImpl implements NotFound {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -1171,6 +2162,10 @@ class _$NotFoundImpl implements NotFound {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -1186,6 +2181,10 @@ class _$NotFoundImpl implements NotFound {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -1287,6 +2286,10 @@ class _$NotAcceptableImpl implements NotAcceptable {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -1302,6 +2305,10 @@ class _$NotAcceptableImpl implements NotAcceptable {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -1317,6 +2324,10 @@ class _$NotAcceptableImpl implements NotAcceptable {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -1336,6 +2347,11 @@ class _$NotAcceptableImpl implements NotAcceptable {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -1351,6 +2367,10 @@ class _$NotAcceptableImpl implements NotAcceptable {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -1366,6 +2386,10 @@ class _$NotAcceptableImpl implements NotAcceptable {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
@@ -1467,6 +2491,10 @@ class _$ServerErrorImpl implements ServerError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
     required TResult Function(String? message) tokenExpired,
@@ -1482,6 +2510,10 @@ class _$ServerErrorImpl implements ServerError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
     TResult? Function(String? message)? tokenExpired,
@@ -1497,6 +2529,10 @@ class _$ServerErrorImpl implements ServerError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
     TResult Function(String? message)? tokenExpired,
@@ -1516,6 +2552,11 @@ class _$ServerErrorImpl implements ServerError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
     required TResult Function(TokenExpired value) tokenExpired,
@@ -1531,6 +2572,10 @@ class _$ServerErrorImpl implements ServerError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
     TResult? Function(TokenExpired value)? tokenExpired,
@@ -1546,6 +2591,10 @@ class _$ServerErrorImpl implements ServerError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
     TResult Function(TokenExpired value)? tokenExpired,
