@@ -22,7 +22,6 @@ class LoginState with _$LoginState {
 class LoginNotifier extends _$LoginNotifier {
   @override
   LoginState build() => const LoginState.initial();
-
   Future<void> login({
     required String email,
     required String password,

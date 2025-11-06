@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:login_base/core/configs/routes/router_name.dart';
 import 'package:login_base/core/widgets/other_widgets/other_widgets.dart';
-import 'package:login_base/login/application/login_notifier.dart';
+import 'package:login_base/login/application/login/login_notifier.dart';
 
 class LoginPage extends HookConsumerWidget {
   const LoginPage({super.key});
@@ -21,7 +23,7 @@ class LoginPage extends HookConsumerWidget {
           );
 
           //TODO - navigate to home page
-         
+          
         },
         failure: (failure) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -68,6 +70,11 @@ class LoginPage extends HookConsumerWidget {
                   containerHeight: 20.w, containerWidth: 20.w, radius: 10),
               orElse: () => const Text("Login"),
             )),
+        TextButton(
+            onPressed: () {
+              context.pushNamed(RouterName.registrationPage);
+            },
+            child: const Text("Dont have an Account?Register Now"))
       ],
     )));
   }
