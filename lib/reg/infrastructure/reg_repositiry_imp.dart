@@ -11,6 +11,6 @@ class RegRepositiryImp extends IRegRepository {
       required String phone,
       required String address,
       required String dateOfBirth}) {
-    throw UnimplementedError();
+    return Future.value(const Right(unit));
   }
 }

@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:login_base/core/value_object.dart';
 import 'package:login_base/login/domain/failures/failures.dart';
 import 'package:login_base/login/infrastructure/repo_provider/login_repository_provider.dart';
+import 'package:login_base/login/infrastructure/user_shared_preference_services.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'login_notifier.freezed.dart';
@@ -56,8 +57,16 @@ class LoginNotifier extends _$LoginNotifier {
 
     result.fold(
       (failure) => state = LoginState.failure(failure),
-      (_) {
+      (user) async {
         print('Login Successful');
+
+        //saving to shared preference
+        await UserSharedPreferenceServices.saveEmail(user.email);
+        await UserSharedPreferenceServices.saveToken(user.accessToken);
+        await UserSharedPreferenceServices.saveName(user.name);
+        await UserSharedPreferenceServices.savePhoneNumber(user.phoneNumber);
+        await UserSharedPreferenceServices.saveloginId(user.loginId.toString());
+
         state = const LoginState.success();
       },
     );

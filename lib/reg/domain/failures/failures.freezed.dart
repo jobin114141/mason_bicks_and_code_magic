@@ -22,6 +22,8 @@ mixin _$RegFailures {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -38,6 +40,8 @@ mixin _$RegFailures {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -54,6 +58,8 @@ mixin _$RegFailures {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -72,6 +78,9 @@ mixin _$RegFailures {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -88,6 +97,8 @@ mixin _$RegFailures {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -104,6 +115,8 @@ mixin _$RegFailures {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -234,6 +247,8 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -253,6 +268,8 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -272,6 +289,8 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -296,6 +315,9 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -315,6 +337,8 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -334,6 +358,8 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -443,6 +469,8 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -462,6 +490,8 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -481,6 +511,8 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -505,6 +537,9 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -524,6 +559,8 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -543,6 +580,8 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -649,6 +688,8 @@ class _$phoneNumberImpl implements phoneNumber {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -668,6 +709,8 @@ class _$phoneNumberImpl implements phoneNumber {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -687,6 +730,8 @@ class _$phoneNumberImpl implements phoneNumber {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -711,6 +756,9 @@ class _$phoneNumberImpl implements phoneNumber {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -730,6 +778,8 @@ class _$phoneNumberImpl implements phoneNumber {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -749,6 +799,8 @@ class _$phoneNumberImpl implements phoneNumber {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -779,6 +831,448 @@ abstract class phoneNumber implements RegFailures {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$phoneNumberImplCopyWith<_$phoneNumberImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UserValidationErrorImplCopyWith<$Res>
+    implements $RegFailuresCopyWith<$Res> {
+  factory _$$UserValidationErrorImplCopyWith(_$UserValidationErrorImpl value,
+          $Res Function(_$UserValidationErrorImpl) then) =
+      __$$UserValidationErrorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$UserValidationErrorImplCopyWithImpl<$Res>
+    extends _$RegFailuresCopyWithImpl<$Res, _$UserValidationErrorImpl>
+    implements _$$UserValidationErrorImplCopyWith<$Res> {
+  __$$UserValidationErrorImplCopyWithImpl(_$UserValidationErrorImpl _value,
+      $Res Function(_$UserValidationErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$UserValidationErrorImpl(
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UserValidationErrorImpl implements UserValidationError {
+  const _$UserValidationErrorImpl({this.message});
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'RegFailures.userValidationError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserValidationErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UserValidationErrorImplCopyWith<_$UserValidationErrorImpl> get copyWith =>
+      __$$UserValidationErrorImplCopyWithImpl<_$UserValidationErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
+    required TResult Function(String? message) dob,
+    required TResult Function(String? message) networkFailure,
+    required TResult Function(String? message) badRequest,
+    required TResult Function(String? message) tokenExpired,
+    required TResult Function(String? message) unexpected,
+    required TResult Function(String? message) noTokenAvailable,
+    required TResult Function(String? message) notFound,
+    required TResult Function(String? message) notAcceptable,
+    required TResult Function(String? message) serverError,
+  }) {
+    return userValidationError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
+    TResult? Function(String? message)? dob,
+    TResult? Function(String? message)? networkFailure,
+    TResult? Function(String? message)? badRequest,
+    TResult? Function(String? message)? tokenExpired,
+    TResult? Function(String? message)? unexpected,
+    TResult? Function(String? message)? noTokenAvailable,
+    TResult? Function(String? message)? notFound,
+    TResult? Function(String? message)? notAcceptable,
+    TResult? Function(String? message)? serverError,
+  }) {
+    return userValidationError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
+    TResult Function(String? message)? dob,
+    TResult Function(String? message)? networkFailure,
+    TResult Function(String? message)? badRequest,
+    TResult Function(String? message)? tokenExpired,
+    TResult Function(String? message)? unexpected,
+    TResult Function(String? message)? noTokenAvailable,
+    TResult Function(String? message)? notFound,
+    TResult Function(String? message)? notAcceptable,
+    TResult Function(String? message)? serverError,
+    required TResult orElse(),
+  }) {
+    if (userValidationError != null) {
+      return userValidationError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
+    required TResult Function(dob value) dob,
+    required TResult Function(NetworkFailure value) networkFailure,
+    required TResult Function(BadRequest value) badRequest,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(Unexpected value) unexpected,
+    required TResult Function(NoTokenAvailable value) noTokenAvailable,
+    required TResult Function(NotFound value) notFound,
+    required TResult Function(NotAcceptable value) notAcceptable,
+    required TResult Function(ServerError value) serverError,
+  }) {
+    return userValidationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
+    TResult? Function(dob value)? dob,
+    TResult? Function(NetworkFailure value)? networkFailure,
+    TResult? Function(BadRequest value)? badRequest,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(Unexpected value)? unexpected,
+    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult? Function(NotFound value)? notFound,
+    TResult? Function(NotAcceptable value)? notAcceptable,
+    TResult? Function(ServerError value)? serverError,
+  }) {
+    return userValidationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
+    TResult Function(dob value)? dob,
+    TResult Function(NetworkFailure value)? networkFailure,
+    TResult Function(BadRequest value)? badRequest,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(Unexpected value)? unexpected,
+    TResult Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult Function(NotFound value)? notFound,
+    TResult Function(NotAcceptable value)? notAcceptable,
+    TResult Function(ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (userValidationError != null) {
+      return userValidationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UserValidationError implements RegFailures {
+  const factory UserValidationError({final String? message}) =
+      _$UserValidationErrorImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UserValidationErrorImplCopyWith<_$UserValidationErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddressValidationErrorImplCopyWith<$Res>
+    implements $RegFailuresCopyWith<$Res> {
+  factory _$$AddressValidationErrorImplCopyWith(
+          _$AddressValidationErrorImpl value,
+          $Res Function(_$AddressValidationErrorImpl) then) =
+      __$$AddressValidationErrorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$AddressValidationErrorImplCopyWithImpl<$Res>
+    extends _$RegFailuresCopyWithImpl<$Res, _$AddressValidationErrorImpl>
+    implements _$$AddressValidationErrorImplCopyWith<$Res> {
+  __$$AddressValidationErrorImplCopyWithImpl(
+      _$AddressValidationErrorImpl _value,
+      $Res Function(_$AddressValidationErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$AddressValidationErrorImpl(
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddressValidationErrorImpl implements AddressValidationError {
+  const _$AddressValidationErrorImpl({this.message});
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'RegFailures.addressValidationError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddressValidationErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddressValidationErrorImplCopyWith<_$AddressValidationErrorImpl>
+      get copyWith => __$$AddressValidationErrorImplCopyWithImpl<
+          _$AddressValidationErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? message) emailValidationError,
+    required TResult Function(String? message) passwordValidationError,
+    required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
+    required TResult Function(String? message) dob,
+    required TResult Function(String? message) networkFailure,
+    required TResult Function(String? message) badRequest,
+    required TResult Function(String? message) tokenExpired,
+    required TResult Function(String? message) unexpected,
+    required TResult Function(String? message) noTokenAvailable,
+    required TResult Function(String? message) notFound,
+    required TResult Function(String? message) notAcceptable,
+    required TResult Function(String? message) serverError,
+  }) {
+    return addressValidationError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? message)? emailValidationError,
+    TResult? Function(String? message)? passwordValidationError,
+    TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
+    TResult? Function(String? message)? dob,
+    TResult? Function(String? message)? networkFailure,
+    TResult? Function(String? message)? badRequest,
+    TResult? Function(String? message)? tokenExpired,
+    TResult? Function(String? message)? unexpected,
+    TResult? Function(String? message)? noTokenAvailable,
+    TResult? Function(String? message)? notFound,
+    TResult? Function(String? message)? notAcceptable,
+    TResult? Function(String? message)? serverError,
+  }) {
+    return addressValidationError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? message)? emailValidationError,
+    TResult Function(String? message)? passwordValidationError,
+    TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
+    TResult Function(String? message)? dob,
+    TResult Function(String? message)? networkFailure,
+    TResult Function(String? message)? badRequest,
+    TResult Function(String? message)? tokenExpired,
+    TResult Function(String? message)? unexpected,
+    TResult Function(String? message)? noTokenAvailable,
+    TResult Function(String? message)? notFound,
+    TResult Function(String? message)? notAcceptable,
+    TResult Function(String? message)? serverError,
+    required TResult orElse(),
+  }) {
+    if (addressValidationError != null) {
+      return addressValidationError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailValidationError value) emailValidationError,
+    required TResult Function(PasswordValidationError value)
+        passwordValidationError,
+    required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
+    required TResult Function(dob value) dob,
+    required TResult Function(NetworkFailure value) networkFailure,
+    required TResult Function(BadRequest value) badRequest,
+    required TResult Function(TokenExpired value) tokenExpired,
+    required TResult Function(Unexpected value) unexpected,
+    required TResult Function(NoTokenAvailable value) noTokenAvailable,
+    required TResult Function(NotFound value) notFound,
+    required TResult Function(NotAcceptable value) notAcceptable,
+    required TResult Function(ServerError value) serverError,
+  }) {
+    return addressValidationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailValidationError value)? emailValidationError,
+    TResult? Function(PasswordValidationError value)? passwordValidationError,
+    TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
+    TResult? Function(dob value)? dob,
+    TResult? Function(NetworkFailure value)? networkFailure,
+    TResult? Function(BadRequest value)? badRequest,
+    TResult? Function(TokenExpired value)? tokenExpired,
+    TResult? Function(Unexpected value)? unexpected,
+    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult? Function(NotFound value)? notFound,
+    TResult? Function(NotAcceptable value)? notAcceptable,
+    TResult? Function(ServerError value)? serverError,
+  }) {
+    return addressValidationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailValidationError value)? emailValidationError,
+    TResult Function(PasswordValidationError value)? passwordValidationError,
+    TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
+    TResult Function(dob value)? dob,
+    TResult Function(NetworkFailure value)? networkFailure,
+    TResult Function(BadRequest value)? badRequest,
+    TResult Function(TokenExpired value)? tokenExpired,
+    TResult Function(Unexpected value)? unexpected,
+    TResult Function(NoTokenAvailable value)? noTokenAvailable,
+    TResult Function(NotFound value)? notFound,
+    TResult Function(NotAcceptable value)? notAcceptable,
+    TResult Function(ServerError value)? serverError,
+    required TResult orElse(),
+  }) {
+    if (addressValidationError != null) {
+      return addressValidationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddressValidationError implements RegFailures {
+  const factory AddressValidationError({final String? message}) =
+      _$AddressValidationErrorImpl;
+
+  @override
+  String? get message;
+
+  /// Create a copy of RegFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddressValidationErrorImplCopyWith<_$AddressValidationErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -851,6 +1345,8 @@ class _$dobImpl implements dob {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -870,6 +1366,8 @@ class _$dobImpl implements dob {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -889,6 +1387,8 @@ class _$dobImpl implements dob {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -913,6 +1413,9 @@ class _$dobImpl implements dob {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -932,6 +1435,8 @@ class _$dobImpl implements dob {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -951,6 +1456,8 @@ class _$dobImpl implements dob {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -1057,6 +1564,8 @@ class _$NetworkFailureImpl implements NetworkFailure {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -1076,6 +1585,8 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -1095,6 +1606,8 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -1119,6 +1632,9 @@ class _$NetworkFailureImpl implements NetworkFailure {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -1138,6 +1654,8 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -1157,6 +1675,8 @@ class _$NetworkFailureImpl implements NetworkFailure {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -1262,6 +1782,8 @@ class _$BadRequestImpl implements BadRequest {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -1281,6 +1803,8 @@ class _$BadRequestImpl implements BadRequest {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -1300,6 +1824,8 @@ class _$BadRequestImpl implements BadRequest {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -1324,6 +1850,9 @@ class _$BadRequestImpl implements BadRequest {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -1343,6 +1872,8 @@ class _$BadRequestImpl implements BadRequest {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -1362,6 +1893,8 @@ class _$BadRequestImpl implements BadRequest {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -1467,6 +2000,8 @@ class _$TokenExpiredImpl implements TokenExpired {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -1486,6 +2021,8 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -1505,6 +2042,8 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -1529,6 +2068,9 @@ class _$TokenExpiredImpl implements TokenExpired {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -1548,6 +2090,8 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -1567,6 +2111,8 @@ class _$TokenExpiredImpl implements TokenExpired {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -1672,6 +2218,8 @@ class _$UnexpectedImpl implements Unexpected {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -1691,6 +2239,8 @@ class _$UnexpectedImpl implements Unexpected {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -1710,6 +2260,8 @@ class _$UnexpectedImpl implements Unexpected {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -1734,6 +2286,9 @@ class _$UnexpectedImpl implements Unexpected {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -1753,6 +2308,8 @@ class _$UnexpectedImpl implements Unexpected {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -1772,6 +2329,8 @@ class _$UnexpectedImpl implements Unexpected {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -1878,6 +2437,8 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -1897,6 +2458,8 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -1916,6 +2479,8 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -1940,6 +2505,9 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -1959,6 +2527,8 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -1978,6 +2548,8 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -2084,6 +2656,8 @@ class _$NotFoundImpl implements NotFound {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -2103,6 +2677,8 @@ class _$NotFoundImpl implements NotFound {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -2122,6 +2698,8 @@ class _$NotFoundImpl implements NotFound {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -2146,6 +2724,9 @@ class _$NotFoundImpl implements NotFound {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -2165,6 +2746,8 @@ class _$NotFoundImpl implements NotFound {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -2184,6 +2767,8 @@ class _$NotFoundImpl implements NotFound {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -2289,6 +2874,8 @@ class _$NotAcceptableImpl implements NotAcceptable {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -2308,6 +2895,8 @@ class _$NotAcceptableImpl implements NotAcceptable {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -2327,6 +2916,8 @@ class _$NotAcceptableImpl implements NotAcceptable {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -2351,6 +2942,9 @@ class _$NotAcceptableImpl implements NotAcceptable {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -2370,6 +2964,8 @@ class _$NotAcceptableImpl implements NotAcceptable {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -2389,6 +2985,8 @@ class _$NotAcceptableImpl implements NotAcceptable {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,
@@ -2494,6 +3092,8 @@ class _$ServerErrorImpl implements ServerError {
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
     required TResult Function(String? message) phoneNumber,
+    required TResult Function(String? message) userValidationError,
+    required TResult Function(String? message) addressValidationError,
     required TResult Function(String? message) dob,
     required TResult Function(String? message) networkFailure,
     required TResult Function(String? message) badRequest,
@@ -2513,6 +3113,8 @@ class _$ServerErrorImpl implements ServerError {
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
     TResult? Function(String? message)? phoneNumber,
+    TResult? Function(String? message)? userValidationError,
+    TResult? Function(String? message)? addressValidationError,
     TResult? Function(String? message)? dob,
     TResult? Function(String? message)? networkFailure,
     TResult? Function(String? message)? badRequest,
@@ -2532,6 +3134,8 @@ class _$ServerErrorImpl implements ServerError {
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
     TResult Function(String? message)? phoneNumber,
+    TResult Function(String? message)? userValidationError,
+    TResult Function(String? message)? addressValidationError,
     TResult Function(String? message)? dob,
     TResult Function(String? message)? networkFailure,
     TResult Function(String? message)? badRequest,
@@ -2556,6 +3160,9 @@ class _$ServerErrorImpl implements ServerError {
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
     required TResult Function(phoneNumber value) phoneNumber,
+    required TResult Function(UserValidationError value) userValidationError,
+    required TResult Function(AddressValidationError value)
+        addressValidationError,
     required TResult Function(dob value) dob,
     required TResult Function(NetworkFailure value) networkFailure,
     required TResult Function(BadRequest value) badRequest,
@@ -2575,6 +3182,8 @@ class _$ServerErrorImpl implements ServerError {
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
     TResult? Function(phoneNumber value)? phoneNumber,
+    TResult? Function(UserValidationError value)? userValidationError,
+    TResult? Function(AddressValidationError value)? addressValidationError,
     TResult? Function(dob value)? dob,
     TResult? Function(NetworkFailure value)? networkFailure,
     TResult? Function(BadRequest value)? badRequest,
@@ -2594,6 +3203,8 @@ class _$ServerErrorImpl implements ServerError {
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
     TResult Function(phoneNumber value)? phoneNumber,
+    TResult Function(UserValidationError value)? userValidationError,
+    TResult Function(AddressValidationError value)? addressValidationError,
     TResult Function(dob value)? dob,
     TResult Function(NetworkFailure value)? networkFailure,
     TResult Function(BadRequest value)? badRequest,

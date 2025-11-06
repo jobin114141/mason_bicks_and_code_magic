@@ -36,6 +36,16 @@ class RegNotifer extends _$RegNotifer {
   }) async {
     state = const RegState.loading();
 
+    // Validate Username
+    final checkUserName = UserName(userName);
+    final userNameResult = checkUserName.validate;
+    final isUserNameValid = userNameResult.fold((failure) {
+      state =
+          RegState.failure(RegFailures.userValidationError(message: failure));
+      return false;
+    }, (_) => true);
+    if (!isUserNameValid) return;
+
     // Validate Email
     final checkEmail = EmailAddress(email);
     final emailResult = checkEmail.validate;
@@ -55,6 +65,20 @@ class RegNotifer extends _$RegNotifer {
       return false;
     }, (_) => true);
     if (!isPasswordValid) return;
+
+    // Confirm Password Empty check
+    if (confirmPassword.isEmpty) {
+      state = const RegState.failure(RegFailures.passwordValidationError(
+          message: "Confirm Password cannot be empty"));
+      return;
+    }
+
+    // Confirm Password Match
+    if (password != confirmPassword) {
+      state = const RegState.failure(RegFailures.passwordValidationError(
+          message: "Passwords do not match"));
+      return;
+    }
 
     // Validate Phone Number
     final checkPhone = PhoneNumber(phone);
@@ -76,6 +100,17 @@ class RegNotifer extends _$RegNotifer {
     }, (_) => true);
     if (!isDobValid) return;
 
+    //address validation
+    final checkAddress = Address(address);
+    final addressResult = checkAddress.validate;
+    final isAddressValid = addressResult.fold((failure) {
+      state = RegState.failure(
+        RegFailures.addressValidationError(message: failure),
+      );
+      return false;
+    }, (_) => true);
+    if (!isAddressValid) return;
+
     final repo = ref.read(regRepostitoryProvider);
 
 // call registration method
@@ -91,8 +126,5 @@ class RegNotifer extends _$RegNotifer {
       print('Registration Successful');
       state = const RegState.success();
     });
-
-
-    
   }
 }

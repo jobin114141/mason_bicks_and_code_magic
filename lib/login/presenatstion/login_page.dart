@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:login_base/core/widgets/other_widgets/other_widgets.dart';
 import 'package:login_base/login/application/login_notifier.dart';
 
 class LoginPage extends HookConsumerWidget {
@@ -11,17 +13,19 @@ class LoginPage extends HookConsumerWidget {
     final emailController = useTextEditingController();
     final passwordController = useTextEditingController();
 
-    
     ref.listen<LoginState>(loginNotifierProvider, (previous, next) {
       next.maybeWhen(
         success: () {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login Successfuly complted')),
           );
+
+          //TODO - navigate to home page
+         
         },
         failure: (failure) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Login Failed: ${failure.message}')),
+            SnackBar(content: Text('${failure.message}')),
           );
         },
         orElse: () {},
@@ -46,14 +50,22 @@ class LoginPage extends HookConsumerWidget {
         ),
         ElevatedButton(
             onPressed: () {
-              final email = emailController.text.trim();
-              final password = passwordController.text.trim();
-              ref
-                  .read(loginNotifierProvider.notifier)
-                  .login(email: email, password: password);
+              loginState.maybeWhen(
+                loading: () {
+                  return;
+                },
+                orElse: () {
+                  final email = emailController.text.trim();
+                  final password = passwordController.text.trim();
+                  ref
+                      .read(loginNotifierProvider.notifier)
+                      .login(email: email, password: password);
+                },
+              );
             },
             child: loginState.maybeWhen(
-              loading: () => const CircularProgressIndicator(),
+              loading: () => waitingCircleIndicator(
+                  containerHeight: 20.w, containerWidth: 20.w, radius: 10),
               orElse: () => const Text("Login"),
             )),
       ],
