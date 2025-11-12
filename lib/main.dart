@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/core/configs/routes/router.dart';
 import 'package:login_base/core/theme/app_text_styles.dart';
-import 'package:login_base/login/presenatstion/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +27,7 @@ class MyApp extends ConsumerWidget {
           routerDelegate: router.routerDelegate,
           routeInformationParser: router.routeInformationParser,
           routeInformationProvider: router.routeInformationProvider,
-          // home: const LoginPage(),
+    
         );
       },
     );

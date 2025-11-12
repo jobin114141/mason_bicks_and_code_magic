@@ -2,6 +2,7 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:login_base/core/value_object.dart';
+import 'package:login_base/login/application/checkLogin/is_token_verified_provider.dart';
 import 'package:login_base/login/domain/failures/failures.dart';
 import 'package:login_base/login/infrastructure/repo_provider/login_repository_provider.dart';
 import 'package:login_base/login/infrastructure/user_shared_preference_services.dart';
@@ -65,8 +66,11 @@ class LoginNotifier extends _$LoginNotifier {
         await UserSharedPreferenceServices.saveName(user.name);
         await UserSharedPreferenceServices.savePhoneNumber(user.phoneNumber);
         await UserSharedPreferenceServices.saveloginId(user.loginId.toString());
+        ref.invalidate(isTokenVerifiedProvider);
 
         state = const LoginState.success();
+
+        print('Success state emited');
       },
     );
   }

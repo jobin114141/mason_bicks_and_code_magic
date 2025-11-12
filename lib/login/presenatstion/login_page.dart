@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,8 +14,9 @@ class LoginPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final emailController = useTextEditingController();
-    final passwordController = useTextEditingController();
+    final emailController =
+        useTextEditingController(text: "jobingeorge.wr@gmail.com");
+    final passwordController = useTextEditingController(text: "A12345678@");
 
     ref.listen<LoginState>(loginNotifierProvider, (previous, next) {
       next.maybeWhen(
@@ -21,9 +24,9 @@ class LoginPage extends HookConsumerWidget {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login Successfuly complted')),
           );
-
-          //TODO - navigate to home page
-          
+          // ref.invalidate(isTokenVerifiedProvider);
+          print("in ui trying to go to next page");
+          context.goNamed(RouterName.mainPage);
         },
         failure: (failure) {
           ScaffoldMessenger.of(context).showSnackBar(

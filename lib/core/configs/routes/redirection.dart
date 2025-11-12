@@ -1,22 +1,36 @@
+// ignore_for_file: avoid_print
+
 part of 'router.dart';
 
+@riverpod
 FutureOr<String?> handleRedirect(
   BuildContext context,
   GoRouterState state,
-  ref,
-) {
-  final isVerifiedAsync = ref.watch(isTokenVerifiedProvider);
+  Ref ref,
+) async {
+  final isVerifiedAsync = await ref.watch(isTokenVerifiedProvider.future);
+  final isVerified = isVerifiedAsync;
 
-  final isVerified = isVerifiedAsync.value ?? false;
+  print("checking in here...");
+  print("is verified - $isVerified");
+  print("state.matchedLocation - ${state.matchedLocation}");
+
+  if (isVerified &&
+      (state.matchedLocation == '/loginPage' ||
+          state.matchedLocation == '/onboarding' ||
+          state.matchedLocation == '/registrationPage')) {
+    return '/mainPage';
+  }
+
+  // Allow access to registration and onboarding without authentication
+  if (state.matchedLocation == '/registrationPage' ||
+      state.matchedLocation == '/onboarding') {
+    return null;
+  }
 
   // If user is not verified, go to login page
   if (!isVerified) {
     return '/loginPage';
-  }
-
-  // If already verified and on login page, redirect to home
-  if (isVerified && state.matchedLocation == '/loginPage') {
-    return '/home';
   }
 
   // No redirect needed
