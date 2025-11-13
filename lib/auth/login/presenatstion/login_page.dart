@@ -22,11 +22,11 @@ class LoginPage extends HookConsumerWidget {
     ref.listen<LoginState>(loginNotifierProvider, (previous, next)async {
       next.maybeWhen(
         success: (user) {
+
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login Successfuly complted')),
           );
-          print("in login sucess");
-          print(user.name);
+
           ref.read(userDataNotifierProvider.notifier).saveUserData(
                 email: user.email,
                 accessToken: user.accessToken,

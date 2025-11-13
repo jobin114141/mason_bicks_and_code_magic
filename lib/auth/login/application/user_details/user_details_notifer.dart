@@ -1,4 +1,7 @@
+// ignore_for_file: avoid_print
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:login_base/auth/login/infrastructure/user_shared_preference_services.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'user_details_notifer.freezed.dart';
@@ -15,7 +18,7 @@ class UserData with _$UserData {
   }) = _UserData;
 }
 
-@riverpod
+@Riverpod(keepAlive: true)
 class UserDataNotifier extends _$UserDataNotifier {
   @override
   UserData? build() => null;
@@ -37,6 +40,23 @@ class UserDataNotifier extends _$UserDataNotifier {
     );
   }
 
+// Load user data
+  Future<void> loadUserData() async {
+    String userName = await UserSharedPreferenceServices.getName() ?? "";
+    String email = await UserSharedPreferenceServices.getEmail() ?? "";
+    String phoneNumber = await UserSharedPreferenceServices.getPhoneNumber() ?? "";
+    String loginId = await UserSharedPreferenceServices.getloginId() ?? "";
+    String accessToken = await UserSharedPreferenceServices.getToken() ?? "";
+
+    state = UserData(
+      email: email,
+      accessToken: accessToken,
+      name: userName,
+      phoneNumber: phoneNumber,
+      loginId: loginId,
+    );
+  }
+
   /// Clear user data
   void clearUserData() {
     state = null;
@@ -44,26 +64,22 @@ class UserDataNotifier extends _$UserDataNotifier {
 
   /// Update specific fields
   void updateEmail(String email) {
-    if (state != null) {
-      state = state!.copyWith(email: email);
-    }
+    state = state!.copyWith(email: email);
   }
 
   void updateToken(String token) {
-    if (state != null) {
-      state = state!.copyWith(accessToken: token);
-    }
+    state = state!.copyWith(accessToken: token);
   }
 
   void updateName(String name) {
-    if (state != null) {
-      state = state!.copyWith(name: name);
-    }
+    state = state!.copyWith(name: name);
   }
 
   void updatePhoneNumber(String phoneNumber) {
-    if (state != null) {
-      state = state!.copyWith(phoneNumber: phoneNumber);
-    }
+    state = state!.copyWith(phoneNumber: phoneNumber);
+  }
+
+  void updateId(String loginId) {
+    state = state!.copyWith(loginId: loginId);
   }
 }

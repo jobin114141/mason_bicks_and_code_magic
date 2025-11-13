@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 part of 'router.dart';
 
 @riverpod
@@ -11,14 +9,12 @@ FutureOr<String?> handleRedirect(
   final isVerifiedAsync = await ref.watch(isTokenVerifiedProvider.future);
   final isVerified = isVerifiedAsync;
 
-  print("checking in here...");
-  print("is verified - $isVerified");
-  print("state.matchedLocation - ${state.matchedLocation}");
-
+  // if is verifed and is on login or reg or onboarding go to homePage
   if (isVerified &&
       (state.matchedLocation == '/loginPage' ||
           state.matchedLocation == '/onboarding' ||
           state.matchedLocation == '/registrationPage')) {
+    ref.read(userDataNotifierProvider.notifier).loadUserData();
     return '/homePage';
   }
 

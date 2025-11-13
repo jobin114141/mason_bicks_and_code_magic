@@ -1,15 +1,11 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/account/presentation/widgets/widgets.dart';
 import 'package:login_base/auth/login/application/checkLogin/is_token_verified_provider.dart';
 import 'package:login_base/auth/login/application/user_details/user_details_notifer.dart';
 import 'package:login_base/auth/login/infrastructure/user_shared_preference_services.dart';
-import 'package:login_base/auth/login/presenatstion/login_page.dart';
-import 'package:login_base/core/configs/routes/router.dart';
-import 'package:login_base/core/configs/routes/router_name.dart';
 
 class AccountPage extends ConsumerWidget {
   const AccountPage({super.key});

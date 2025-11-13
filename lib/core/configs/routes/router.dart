@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_base/account/presentation/account_page.dart';
 import 'package:login_base/auth/login/application/checkLogin/is_token_verified_provider.dart';
+import 'package:login_base/auth/login/application/user_details/user_details_notifer.dart';
 import 'package:login_base/auth/login/presenatstion/login_page.dart';
 import 'package:login_base/auth/reg/presentation/reg_page.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
@@ -43,24 +44,22 @@ final routeProvider = Provider((ref) {
             return MainPage(navigationShell: navigationShell);
           },
           branches: [
-
             StatefulShellBranch(routes: [
               GoRoute(
                   path: "/homePage",
+                  name: RouterName.homePage,
                   builder: (context, state) {
                     return const HomePage();
                   }),
             ]),
-
             StatefulShellBranch(routes: [
               GoRoute(
                   path: "/accountPage",
+                  name: RouterName.accountPage,
                   builder: (context, state) {
                     return const AccountPage();
                   }),
             ])
-
-
           ])
     ],
   );
