@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_notifier.dart';
+part of 'homepage_notifer.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,13 +15,13 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$LoginState {
+mixin _$HomepageState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(LoginFailures loginFailures) failure,
+    required TResult Function(HomepageFailures homepageFailures) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$LoginState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(LoginFailures loginFailures)? failure,
+    TResult? Function(HomepageFailures homepageFailures)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$LoginState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(LoginFailures loginFailures)? failure,
+    TResult Function(HomepageFailures homepageFailures)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,23 +69,23 @@ mixin _$LoginState {
 }
 
 /// @nodoc
-abstract class $LoginStateCopyWith<$Res> {
-  factory $LoginStateCopyWith(
-          LoginState value, $Res Function(LoginState) then) =
-      _$LoginStateCopyWithImpl<$Res, LoginState>;
+abstract class $HomepageStateCopyWith<$Res> {
+  factory $HomepageStateCopyWith(
+          HomepageState value, $Res Function(HomepageState) then) =
+      _$HomepageStateCopyWithImpl<$Res, HomepageState>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
-    implements $LoginStateCopyWith<$Res> {
-  _$LoginStateCopyWithImpl(this._value, this._then);
+class _$HomepageStateCopyWithImpl<$Res, $Val extends HomepageState>
+    implements $HomepageStateCopyWith<$Res> {
+  _$HomepageStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -98,13 +98,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$HomepageStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -115,7 +115,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'LoginState.initial()';
+    return 'HomepageState.initial()';
   }
 
   @override
@@ -133,7 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(LoginFailures loginFailures) failure,
+    required TResult Function(HomepageFailures homepageFailures) failure,
   }) {
     return initial();
   }
@@ -144,7 +144,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(LoginFailures loginFailures)? failure,
+    TResult? Function(HomepageFailures homepageFailures)? failure,
   }) {
     return initial?.call();
   }
@@ -155,7 +155,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(LoginFailures loginFailures)? failure,
+    TResult Function(HomepageFailures homepageFailures)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -202,7 +202,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements LoginState {
+abstract class _Initial implements HomepageState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -215,13 +215,13 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$HomepageStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -232,7 +232,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'LoginState.loading()';
+    return 'HomepageState.loading()';
   }
 
   @override
@@ -250,7 +250,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(LoginFailures loginFailures) failure,
+    required TResult Function(HomepageFailures homepageFailures) failure,
   }) {
     return loading();
   }
@@ -261,7 +261,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(LoginFailures loginFailures)? failure,
+    TResult? Function(HomepageFailures homepageFailures)? failure,
   }) {
     return loading?.call();
   }
@@ -272,7 +272,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(LoginFailures loginFailures)? failure,
+    TResult Function(HomepageFailures homepageFailures)? failure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -319,7 +319,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements LoginState {
+abstract class _Loading implements HomepageState {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -332,13 +332,13 @@ abstract class _$$SuccessImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$SuccessImpl>
+    extends _$HomepageStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -349,7 +349,7 @@ class _$SuccessImpl implements _Success {
 
   @override
   String toString() {
-    return 'LoginState.success()';
+    return 'HomepageState.success()';
   }
 
   @override
@@ -367,7 +367,7 @@ class _$SuccessImpl implements _Success {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(LoginFailures loginFailures) failure,
+    required TResult Function(HomepageFailures homepageFailures) failure,
   }) {
     return success();
   }
@@ -378,7 +378,7 @@ class _$SuccessImpl implements _Success {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(LoginFailures loginFailures)? failure,
+    TResult? Function(HomepageFailures homepageFailures)? failure,
   }) {
     return success?.call();
   }
@@ -389,7 +389,7 @@ class _$SuccessImpl implements _Success {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(LoginFailures loginFailures)? failure,
+    TResult Function(HomepageFailures homepageFailures)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -436,7 +436,7 @@ class _$SuccessImpl implements _Success {
   }
 }
 
-abstract class _Success implements LoginState {
+abstract class _Success implements HomepageState {
   const factory _Success() = _$SuccessImpl;
 }
 
@@ -446,41 +446,41 @@ abstract class _$$FailureImplCopyWith<$Res> {
           _$FailureImpl value, $Res Function(_$FailureImpl) then) =
       __$$FailureImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({LoginFailures loginFailures});
+  $Res call({HomepageFailures homepageFailures});
 
-  $LoginFailuresCopyWith<$Res> get loginFailures;
+  $HomepageFailuresCopyWith<$Res> get homepageFailures;
 }
 
 /// @nodoc
 class __$$FailureImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$FailureImpl>
+    extends _$HomepageStateCopyWithImpl<$Res, _$FailureImpl>
     implements _$$FailureImplCopyWith<$Res> {
   __$$FailureImplCopyWithImpl(
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? loginFailures = null,
+    Object? homepageFailures = null,
   }) {
     return _then(_$FailureImpl(
-      null == loginFailures
-          ? _value.loginFailures
-          : loginFailures // ignore: cast_nullable_to_non_nullable
-              as LoginFailures,
+      null == homepageFailures
+          ? _value.homepageFailures
+          : homepageFailures // ignore: cast_nullable_to_non_nullable
+              as HomepageFailures,
     ));
   }
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $LoginFailuresCopyWith<$Res> get loginFailures {
-    return $LoginFailuresCopyWith<$Res>(_value.loginFailures, (value) {
-      return _then(_value.copyWith(loginFailures: value));
+  $HomepageFailuresCopyWith<$Res> get homepageFailures {
+    return $HomepageFailuresCopyWith<$Res>(_value.homepageFailures, (value) {
+      return _then(_value.copyWith(homepageFailures: value));
     });
   }
 }
@@ -488,14 +488,14 @@ class __$$FailureImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FailureImpl implements _Failure {
-  const _$FailureImpl(this.loginFailures);
+  const _$FailureImpl(this.homepageFailures);
 
   @override
-  final LoginFailures loginFailures;
+  final HomepageFailures homepageFailures;
 
   @override
   String toString() {
-    return 'LoginState.failure(loginFailures: $loginFailures)';
+    return 'HomepageState.failure(homepageFailures: $homepageFailures)';
   }
 
   @override
@@ -503,14 +503,14 @@ class _$FailureImpl implements _Failure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FailureImpl &&
-            (identical(other.loginFailures, loginFailures) ||
-                other.loginFailures == loginFailures));
+            (identical(other.homepageFailures, homepageFailures) ||
+                other.homepageFailures == homepageFailures));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, loginFailures);
+  int get hashCode => Object.hash(runtimeType, homepageFailures);
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -524,9 +524,9 @@ class _$FailureImpl implements _Failure {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(LoginFailures loginFailures) failure,
+    required TResult Function(HomepageFailures homepageFailures) failure,
   }) {
-    return failure(loginFailures);
+    return failure(homepageFailures);
   }
 
   @override
@@ -535,9 +535,9 @@ class _$FailureImpl implements _Failure {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(LoginFailures loginFailures)? failure,
+    TResult? Function(HomepageFailures homepageFailures)? failure,
   }) {
-    return failure?.call(loginFailures);
+    return failure?.call(homepageFailures);
   }
 
   @override
@@ -546,11 +546,11 @@ class _$FailureImpl implements _Failure {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(LoginFailures loginFailures)? failure,
+    TResult Function(HomepageFailures homepageFailures)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
-      return failure(loginFailures);
+      return failure(homepageFailures);
     }
     return orElse();
   }
@@ -593,12 +593,13 @@ class _$FailureImpl implements _Failure {
   }
 }
 
-abstract class _Failure implements LoginState {
-  const factory _Failure(final LoginFailures loginFailures) = _$FailureImpl;
+abstract class _Failure implements HomepageState {
+  const factory _Failure(final HomepageFailures homepageFailures) =
+      _$FailureImpl;
 
-  LoginFailures get loginFailures;
+  HomepageFailures get homepageFailures;
 
-  /// Create a copy of LoginState
+  /// Create a copy of HomepageState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>

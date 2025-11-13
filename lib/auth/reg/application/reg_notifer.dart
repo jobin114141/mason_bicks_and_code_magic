@@ -2,8 +2,8 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:login_base/core/value_object.dart';
-import 'package:login_base/reg/domain/failures/failures.dart';
-import 'package:login_base/reg/infrastructure/repo_provider/reg_repository_provider.dart';
+import 'package:login_base/auth/reg/domain/failures/failures.dart';
+import 'package:login_base/auth/reg/infrastructure/repo_provider/reg_repository_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'reg_notifer.freezed.dart';

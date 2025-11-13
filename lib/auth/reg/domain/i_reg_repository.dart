@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:login_base/reg/domain/failures/failures.dart';
+import 'package:login_base/auth/reg/domain/failures/failures.dart';
 
 abstract class IRegRepository {
   Future<Either<RegFailures, Unit>> registrationMethod({

@@ -19,7 +19,7 @@ FutureOr<String?> handleRedirect(
       (state.matchedLocation == '/loginPage' ||
           state.matchedLocation == '/onboarding' ||
           state.matchedLocation == '/registrationPage')) {
-    return '/mainPage';
+    return '/homePage';
   }
 
   // Allow access to registration and onboarding without authentication

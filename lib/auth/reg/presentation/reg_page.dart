@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:login_base/reg/application/reg_notifer.dart';
+import 'package:login_base/auth/reg/application/reg_notifer.dart';
 import 'package:login_base/core/widgets/notifications/notification_widgets.dart';
 
 class RegPage extends HookConsumerWidget {

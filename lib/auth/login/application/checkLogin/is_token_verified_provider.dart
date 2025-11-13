@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:login_base/login/infrastructure/user_shared_preference_services.dart';
+import 'package:login_base/auth/login/infrastructure/user_shared_preference_services.dart';
 
 part 'is_token_verified_provider.g.dart';
 

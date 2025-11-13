@@ -1,11 +1,12 @@
 // ignore_for_file: avoid_print
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:login_base/auth/login/application/checkLogin/is_token_verified_provider.dart';
+import 'package:login_base/auth/login/domain/models/user.dart';
 import 'package:login_base/core/value_object.dart';
-import 'package:login_base/login/application/checkLogin/is_token_verified_provider.dart';
-import 'package:login_base/login/domain/failures/failures.dart';
-import 'package:login_base/login/infrastructure/repo_provider/login_repository_provider.dart';
-import 'package:login_base/login/infrastructure/user_shared_preference_services.dart';
+import 'package:login_base/auth/login/domain/failures/failures.dart';
+import 'package:login_base/auth/login/infrastructure/repo_provider/login_repository_provider.dart';
+import 'package:login_base/auth/login/infrastructure/user_shared_preference_services.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'login_notifier.freezed.dart';
@@ -15,7 +16,7 @@ part 'login_notifier.g.dart';
 class LoginState with _$LoginState {
   const factory LoginState.initial() = _Initial;
   const factory LoginState.loading() = _Loading;
-  const factory LoginState.success() = _Success;
+  const factory LoginState.success(User userData) = _Success;
   const factory LoginState.failure(LoginFailures loginFailures) = _Failure;
 }
 
@@ -68,7 +69,7 @@ class LoginNotifier extends _$LoginNotifier {
         await UserSharedPreferenceServices.saveloginId(user.loginId.toString());
         ref.invalidate(isTokenVerifiedProvider);
 
-        state = const LoginState.success();
+        state =  LoginState.success(user);
 
         print('Success state emited');
       },

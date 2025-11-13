@@ -5,9 +5,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:login_base/auth/login/application/login/login_notifier.dart';
+import 'package:login_base/auth/login/application/user_details/user_details_notifer.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
 import 'package:login_base/core/widgets/other_widgets/other_widgets.dart';
-import 'package:login_base/login/application/login/login_notifier.dart';
 
 class LoginPage extends HookConsumerWidget {
   const LoginPage({super.key});
@@ -18,15 +19,23 @@ class LoginPage extends HookConsumerWidget {
         useTextEditingController(text: "jobingeorge.wr@gmail.com");
     final passwordController = useTextEditingController(text: "A12345678@");
 
-    ref.listen<LoginState>(loginNotifierProvider, (previous, next) {
+    ref.listen<LoginState>(loginNotifierProvider, (previous, next)async {
       next.maybeWhen(
-        success: () {
+        success: (user) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login Successfuly complted')),
           );
-          // ref.invalidate(isTokenVerifiedProvider);
+          print("in login sucess");
+          print(user.name);
+          ref.read(userDataNotifierProvider.notifier).saveUserData(
+                email: user.email,
+                accessToken: user.accessToken,
+                name: user.name,
+                phoneNumber: user.phoneNumber,
+                loginId: user.loginId,
+              );
           print("in ui trying to go to next page");
-          context.goNamed(RouterName.mainPage);
+          context.goNamed(RouterName.homePage);
         },
         failure: (failure) {
           ScaffoldMessenger.of(context).showSnackBar(

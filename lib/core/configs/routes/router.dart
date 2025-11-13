@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_base/account/presentation/account_page.dart';
+import 'package:login_base/auth/login/application/checkLogin/is_token_verified_provider.dart';
+import 'package:login_base/auth/login/presenatstion/login_page.dart';
+import 'package:login_base/auth/reg/presentation/reg_page.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
-import 'package:login_base/homepage/presentation/home_page.dart';
-import 'package:login_base/login/application/checkLogin/is_token_verified_provider.dart';
-import 'package:login_base/login/presenatstion/login_page.dart';
 import 'package:login_base/mainpage/presentation/main_page.dart';
+import 'package:login_base/homepage/presentation/home_page.dart';
 import 'package:login_base/on_boarding_screen.dart';
-import 'package:login_base/reg/presentation/reg_page.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'redirection.dart';
@@ -40,16 +40,18 @@ final routeProvider = Provider((ref) {
       ),
       StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
-            return HomePage(navigationShell: navigationShell);
+            return MainPage(navigationShell: navigationShell);
           },
           branches: [
+
             StatefulShellBranch(routes: [
               GoRoute(
-                  path: "/mainPage",
+                  path: "/homePage",
                   builder: (context, state) {
-                    return const MainPage();
+                    return const HomePage();
                   }),
             ]),
+
             StatefulShellBranch(routes: [
               GoRoute(
                   path: "/accountPage",
@@ -57,6 +59,8 @@ final routeProvider = Provider((ref) {
                     return const AccountPage();
                   }),
             ])
+
+
           ])
     ],
   );

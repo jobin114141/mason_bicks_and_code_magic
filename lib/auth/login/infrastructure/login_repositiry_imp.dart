@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:login_base/login/domain/failures/failures.dart';
-import 'package:login_base/login/domain/i_login_repository.dart';
-import 'package:login_base/login/domain/models/user.dart';
+import 'package:login_base/auth/login/domain/failures/failures.dart';
+import 'package:login_base/auth/login/domain/i_login_repository.dart';
+import 'package:login_base/auth/login/domain/models/user.dart';
 
 class LoginRepositiryImp extends ILoginRepository {
   @override
