@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:login_base/account/presentation/account_page.dart';
-import 'package:login_base/auth/login/application/checkLogin/is_token_verified_provider.dart';
-import 'package:login_base/auth/login/application/user_details/user_details_notifer.dart';
-import 'package:login_base/auth/login/presenatstion/login_page.dart';
-import 'package:login_base/auth/reg/presentation/reg_page.dart';
+import 'package:login_base/features/account/presentation/account_page.dart';
+import 'package:login_base/features/auth/login/application/checkLogin/is_token_verified_provider.dart';
+import 'package:login_base/features/auth/login/application/user_details/user_details_notifer.dart';
+import 'package:login_base/features/auth/login/presenatstion/login_page.dart';
+import 'package:login_base/features/auth/reg/presentation/reg_page.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
-import 'package:login_base/mainpage/presentation/main_page.dart';
-import 'package:login_base/homepage/presentation/home_page.dart';
+import 'package:login_base/features/mainpage/presentation/main_page.dart';
+import 'package:login_base/features/homepage/presentation/home_page.dart';
 import 'package:login_base/on_boarding_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
