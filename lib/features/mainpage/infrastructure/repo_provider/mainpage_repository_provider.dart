@@ -4,6 +4,6 @@ import 'package:login_base/features/mainpage/infrastructure/mainpage_repositiry_
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 @riverpod
-IMainpageRepository MainpageRepostitory (Ref ref) {
+IMainpageRepository mainpageRepostitory (Ref ref) {
   return MainpageRepositiryImp();
 }

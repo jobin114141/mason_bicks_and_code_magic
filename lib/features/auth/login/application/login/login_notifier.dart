@@ -51,7 +51,7 @@ class LoginNotifier extends _$LoginNotifier {
     if (!isPasswordValid) return;
 
     final repo = ref.read(loginRepostitoryProvider);
-    
+
     final result = await repo.login(
       email: checkEmail.value,
       password: checkPassword.value,
@@ -70,7 +70,7 @@ class LoginNotifier extends _$LoginNotifier {
         await UserSharedPreferenceServices.saveloginId(user.loginId.toString());
         ref.invalidate(isTokenVerifiedProvider);
 
-        state =  LoginState.success(user);
+        state = LoginState.success(user);
 
         print('Success state emited');
       },

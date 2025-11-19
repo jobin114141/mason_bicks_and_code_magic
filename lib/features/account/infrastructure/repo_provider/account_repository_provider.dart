@@ -4,6 +4,6 @@ import 'package:login_base/features/account/infrastructure/account_repositiry_im
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 @riverpod
-IAccountRepository AccountRepostitory (Ref ref) {
+IAccountRepository accountRepostitory (Ref ref) {
   return AccountRepositiryImp();
 }

@@ -11,11 +11,7 @@ import 'package:login_base/features/homepage/domain/models/product_model.dart';
 class HomepageRepositiryImp extends IHomepageRepository {
   final Ref ref;
   HomepageRepositiryImp(this.ref);
-  @override
-  Future<Either<HomepageFailures, Unit>> functionName(
-      {required String param1}) {
-    throw UnimplementedError();
-  }
+  
 
   @override
   Future<Either<HomepageFailures, List<Product>>> fetchProducts() async {
