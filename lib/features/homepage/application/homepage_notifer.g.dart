@@ -1,26 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_details_notifer.dart';
+part of 'homepage_notifer.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$userDataNotifierHash() => r'3adafe0f3bd4fafdcbce1194b6b09ff98192e062';
+String _$homePageNotifierHash() => r'a3bf0e8546e0afa3c97b944f98a1d6675b30fe58';
 
-/// See also [UserDataNotifier].
-@ProviderFor(UserDataNotifier)
-final userDataNotifierProvider =
-    NotifierProvider<UserDataNotifier, UserData?>.internal(
-  UserDataNotifier.new,
-  name: r'userDataNotifierProvider',
+/// See also [HomePageNotifier].
+@ProviderFor(HomePageNotifier)
+final homePageNotifierProvider =
+    AutoDisposeNotifierProvider<HomePageNotifier, HomeState>.internal(
+  HomePageNotifier.new,
+  name: r'homePageNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$userDataNotifierHash,
+      : _$homePageNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$UserDataNotifier = Notifier<UserData?>;
+typedef _$HomePageNotifier = AutoDisposeNotifier<HomeState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

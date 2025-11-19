@@ -51,6 +51,7 @@ class LoginNotifier extends _$LoginNotifier {
     if (!isPasswordValid) return;
 
     final repo = ref.read(loginRepostitoryProvider);
+    
     final result = await repo.login(
       email: checkEmail.value,
       password: checkPassword.value,

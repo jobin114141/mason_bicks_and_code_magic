@@ -161,7 +161,7 @@ class __$$NetworkFailureImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$NetworkFailureImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -172,7 +172,7 @@ class __$$NetworkFailureImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkFailureImpl implements NetworkFailure {
-  const _$NetworkFailureImpl({this.message});
+  const _$NetworkFailureImpl([this.message]);
 
   @override
   final String? message;
@@ -302,7 +302,7 @@ class _$NetworkFailureImpl implements NetworkFailure {
 }
 
 abstract class NetworkFailure implements HomepageFailures {
-  const factory NetworkFailure({final String? message}) = _$NetworkFailureImpl;
+  const factory NetworkFailure([final String? message]) = _$NetworkFailureImpl;
 
   @override
   String? get message;
@@ -342,7 +342,7 @@ class __$$BadRequestImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$BadRequestImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -353,7 +353,7 @@ class __$$BadRequestImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$BadRequestImpl implements BadRequest {
-  const _$BadRequestImpl({this.message});
+  const _$BadRequestImpl([this.message]);
 
   @override
   final String? message;
@@ -482,7 +482,7 @@ class _$BadRequestImpl implements BadRequest {
 }
 
 abstract class BadRequest implements HomepageFailures {
-  const factory BadRequest({final String? message}) = _$BadRequestImpl;
+  const factory BadRequest([final String? message]) = _$BadRequestImpl;
 
   @override
   String? get message;
@@ -522,7 +522,7 @@ class __$$TokenExpiredImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$TokenExpiredImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -533,7 +533,7 @@ class __$$TokenExpiredImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TokenExpiredImpl implements TokenExpired {
-  const _$TokenExpiredImpl({this.message});
+  const _$TokenExpiredImpl([this.message]);
 
   @override
   final String? message;
@@ -662,7 +662,7 @@ class _$TokenExpiredImpl implements TokenExpired {
 }
 
 abstract class TokenExpired implements HomepageFailures {
-  const factory TokenExpired({final String? message}) = _$TokenExpiredImpl;
+  const factory TokenExpired([final String? message]) = _$TokenExpiredImpl;
 
   @override
   String? get message;
@@ -702,7 +702,7 @@ class __$$UnexpectedImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$UnexpectedImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -713,7 +713,7 @@ class __$$UnexpectedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UnexpectedImpl implements Unexpected {
-  const _$UnexpectedImpl({this.message});
+  const _$UnexpectedImpl([this.message]);
 
   @override
   final String? message;
@@ -842,7 +842,7 @@ class _$UnexpectedImpl implements Unexpected {
 }
 
 abstract class Unexpected implements HomepageFailures {
-  const factory Unexpected({final String? message}) = _$UnexpectedImpl;
+  const factory Unexpected([final String? message]) = _$UnexpectedImpl;
 
   @override
   String? get message;
@@ -882,7 +882,7 @@ class __$$NoTokenAvailableImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$NoTokenAvailableImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -893,7 +893,7 @@ class __$$NoTokenAvailableImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NoTokenAvailableImpl implements NoTokenAvailable {
-  const _$NoTokenAvailableImpl({this.message});
+  const _$NoTokenAvailableImpl([this.message]);
 
   @override
   final String? message;
@@ -1023,7 +1023,7 @@ class _$NoTokenAvailableImpl implements NoTokenAvailable {
 }
 
 abstract class NoTokenAvailable implements HomepageFailures {
-  const factory NoTokenAvailable({final String? message}) =
+  const factory NoTokenAvailable([final String? message]) =
       _$NoTokenAvailableImpl;
 
   @override
@@ -1064,7 +1064,7 @@ class __$$NotFoundImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$NotFoundImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1075,7 +1075,7 @@ class __$$NotFoundImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NotFoundImpl implements NotFound {
-  const _$NotFoundImpl({this.message});
+  const _$NotFoundImpl([this.message]);
 
   @override
   final String? message;
@@ -1204,7 +1204,7 @@ class _$NotFoundImpl implements NotFound {
 }
 
 abstract class NotFound implements HomepageFailures {
-  const factory NotFound({final String? message}) = _$NotFoundImpl;
+  const factory NotFound([final String? message]) = _$NotFoundImpl;
 
   @override
   String? get message;
@@ -1244,7 +1244,7 @@ class __$$NotAcceptableImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$NotAcceptableImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1255,7 +1255,7 @@ class __$$NotAcceptableImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NotAcceptableImpl implements NotAcceptable {
-  const _$NotAcceptableImpl({this.message});
+  const _$NotAcceptableImpl([this.message]);
 
   @override
   final String? message;
@@ -1384,7 +1384,7 @@ class _$NotAcceptableImpl implements NotAcceptable {
 }
 
 abstract class NotAcceptable implements HomepageFailures {
-  const factory NotAcceptable({final String? message}) = _$NotAcceptableImpl;
+  const factory NotAcceptable([final String? message]) = _$NotAcceptableImpl;
 
   @override
   String? get message;
@@ -1424,7 +1424,7 @@ class __$$ServerErrorImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$ServerErrorImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1435,7 +1435,7 @@ class __$$ServerErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ServerErrorImpl implements ServerError {
-  const _$ServerErrorImpl({this.message});
+  const _$ServerErrorImpl([this.message]);
 
   @override
   final String? message;
@@ -1564,7 +1564,7 @@ class _$ServerErrorImpl implements ServerError {
 }
 
 abstract class ServerError implements HomepageFailures {
-  const factory ServerError({final String? message}) = _$ServerErrorImpl;
+  const factory ServerError([final String? message]) = _$ServerErrorImpl;
 
   @override
   String? get message;

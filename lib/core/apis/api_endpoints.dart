@@ -1,8 +1,8 @@
 class ApiEndPoints {
-  static const String baseUrl = "https://humblehearts.onrender.com";
+  static const String baseUrl = "https://fakeapi.in";
   static const String registerUser = "$baseUrl/student/auth/register";
   static const String userLogin = "$baseUrl/student/auth/login";
-
+  static const String fetchProducts = "$baseUrl/api/products";
 }
 
 
