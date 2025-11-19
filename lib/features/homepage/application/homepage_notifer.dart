@@ -22,6 +22,8 @@ class HomePageNotifier extends _$HomePageNotifier {
 
     result.fold(
       (failure) {
+        print("in riverpod fold failure");
+        print(failure);
         state = state.copyWith(
           isLoading: false,
           error: failure,

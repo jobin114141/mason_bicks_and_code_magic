@@ -27,23 +27,32 @@ class RegPage extends HookConsumerWidget {
         },
         failure: (failure) {
           failure.maybeWhen(
-              badRequest: (message) => (message) => snackBarMessage(
-                  context, message ?? "Bad Request Occurred",
+              commonFailure: (commonFailure) {
+                commonFailure.maybeWhen(
+                    badRequest: (message) => (message) => snackBarMessage(
+                        context, message ?? "Bad Request Occurred",
+                        type: SnackBarType.error),
+                    notAcceptable: (message) => (message) => snackBarMessage(
+                        context, message ?? "Unacceptable Request",
+                        type: SnackBarType.error),
+                    networkFailure: (message) => snackBarMessage(
+                        context, message ?? "Please Check Your INternet Connection",
+                        type: SnackBarType.error),
+                    unexpected: (message) => snackBarMessage(
+                        context, message ?? "Unexpected Error Occured",
+                        type: SnackBarType.error),
+                    serverError: (message) => snackBarMessage(context, message ?? "Server Error Occured", type: SnackBarType.error),
+                    orElse: () {});
+              },
+              phoneNumber: (message) => snackBarMessage(
+                  context, message ?? "PhoneNumber Validation Failed",
                   type: SnackBarType.error),
-              notAcceptable: (message) => (message) => snackBarMessage(
-                  context, message ?? "Unacceptable Request",
+              passwordValidationError: (message) => snackBarMessage(
+                  context, message ?? "Password Validation Failed",
                   type: SnackBarType.error),
-              networkFailure: (message) => snackBarMessage(
-                  context, message ?? "Please Check Your INternet Connection",
+              emailValidationError: (message) => snackBarMessage(
+                  context, message ?? "Email Validation Failed",
                   type: SnackBarType.error),
-              dob: (message) => snackBarMessage(context, message ?? "Date Of Birth error Occured",
-                  type: SnackBarType.error),
-              unexpected: (message) =>
-                  snackBarMessage(context, message ?? "Unexpected Error Occured", type: SnackBarType.error),
-              serverError: (message) => snackBarMessage(context, message ?? "Server Error Occured", type: SnackBarType.error),
-              phoneNumber: (message) => snackBarMessage(context, message ?? "PhoneNumber Validation Failed", type: SnackBarType.error),
-              passwordValidationError: (message) => snackBarMessage(context, message ?? "Password Validation Failed", type: SnackBarType.error),
-              emailValidationError: (message) => snackBarMessage(context, message ?? "Email Validation Failed", type: SnackBarType.error),
               orElse: () {});
         },
         orElse: () {},

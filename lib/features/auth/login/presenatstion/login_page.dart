@@ -39,7 +39,7 @@ class LoginPage extends HookConsumerWidget {
         },
         failure: (failure) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('${failure.message}')),
+            SnackBar(content: Text('$failure')),
           );
         },
         orElse: () {},

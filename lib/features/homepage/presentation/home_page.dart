@@ -28,11 +28,32 @@ class HomePage extends HookConsumerWidget {
           }
 
           if (state.error != null) {
-            return Center(
-              child: Text("Error: ${state.error}"),
+            // RETURN this!
+            return state.error!.maybeWhen(
+              commonFailure: (failure) {
+                return failure.maybeWhen(
+                  badRequest: (message) => Center(
+                    child: Text("Error: $message"),
+                  ),
+                  notAcceptable: (message) => Center(
+                    child: Text("Error: $message"),
+                  ),
+                  networkFailure: (message) {
+                    return Center(
+                      child: Text("Network Error: $message"),
+                    );
+                  },
+                  serverError: (message) => Center(
+                    child: Text("Server Error: $message"),
+                  ),
+                  orElse: () => const Center(
+                    child: Text("Unknown error"),
+                  ),
+                );
+              },
+              orElse: () => const SizedBox.shrink(),
             );
           }
-
           return ListView.builder(
             itemCount: state.products.length,
             itemBuilder: (context, index) {

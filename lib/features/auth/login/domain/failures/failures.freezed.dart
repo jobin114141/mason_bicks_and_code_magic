@@ -16,22 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LoginFailures {
-  String? get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? message) emailAlreadyExists,
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,16 +29,7 @@ mixin _$LoginFailures {
     TResult? Function(String? message)? emailAlreadyExists,
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,16 +37,7 @@ mixin _$LoginFailures {
     TResult Function(String? message)? emailAlreadyExists,
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -75,16 +47,7 @@ mixin _$LoginFailures {
     required TResult Function(EmailValidationError value) emailValidationError,
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -92,16 +55,7 @@ mixin _$LoginFailures {
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -109,24 +63,9 @@ mixin _$LoginFailures {
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LoginFailuresCopyWith<LoginFailures> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -135,8 +74,6 @@ abstract class $LoginFailuresCopyWith<$Res> {
   factory $LoginFailuresCopyWith(
           LoginFailures value, $Res Function(LoginFailures) then) =
       _$LoginFailuresCopyWithImpl<$Res, LoginFailures>;
-  @useResult
-  $Res call({String? message});
 }
 
 /// @nodoc
@@ -151,27 +88,13 @@ class _$LoginFailuresCopyWithImpl<$Res, $Val extends LoginFailures>
 
   /// Create a copy of LoginFailures
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_value.copyWith(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$EmailAlreadyExistsImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
+abstract class _$$EmailAlreadyExistsImplCopyWith<$Res> {
   factory _$$EmailAlreadyExistsImplCopyWith(_$EmailAlreadyExistsImpl value,
           $Res Function(_$EmailAlreadyExistsImpl) then) =
       __$$EmailAlreadyExistsImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({String? message});
 }
@@ -239,16 +162,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
     required TResult Function(String? message) emailAlreadyExists,
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) {
     return emailAlreadyExists(message);
   }
@@ -259,16 +173,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
     TResult? Function(String? message)? emailAlreadyExists,
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) {
     return emailAlreadyExists?.call(message);
   }
@@ -279,16 +184,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
     TResult Function(String? message)? emailAlreadyExists,
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) {
     if (emailAlreadyExists != null) {
@@ -304,16 +200,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
     required TResult Function(EmailValidationError value) emailValidationError,
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) {
     return emailAlreadyExists(this);
   }
@@ -324,16 +211,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) {
     return emailAlreadyExists?.call(this);
   }
@@ -344,16 +222,7 @@ class _$EmailAlreadyExistsImpl implements EmailAlreadyExists {
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) {
     if (emailAlreadyExists != null) {
@@ -367,24 +236,20 @@ abstract class EmailAlreadyExists implements LoginFailures {
   const factory EmailAlreadyExists({final String? message}) =
       _$EmailAlreadyExistsImpl;
 
-  @override
   String? get message;
 
   /// Create a copy of LoginFailures
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmailAlreadyExistsImplCopyWith<_$EmailAlreadyExistsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$EmailValidationErrorImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
+abstract class _$$EmailValidationErrorImplCopyWith<$Res> {
   factory _$$EmailValidationErrorImplCopyWith(_$EmailValidationErrorImpl value,
           $Res Function(_$EmailValidationErrorImpl) then) =
       __$$EmailValidationErrorImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({String? message});
 }
@@ -453,16 +318,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     required TResult Function(String? message) emailAlreadyExists,
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) {
     return emailValidationError(message);
   }
@@ -473,16 +329,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult? Function(String? message)? emailAlreadyExists,
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) {
     return emailValidationError?.call(message);
   }
@@ -493,16 +340,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult Function(String? message)? emailAlreadyExists,
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) {
     if (emailValidationError != null) {
@@ -518,16 +356,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     required TResult Function(EmailValidationError value) emailValidationError,
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) {
     return emailValidationError(this);
   }
@@ -538,16 +367,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) {
     return emailValidationError?.call(this);
   }
@@ -558,16 +378,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) {
     if (emailValidationError != null) {
@@ -581,25 +392,21 @@ abstract class EmailValidationError implements LoginFailures {
   const factory EmailValidationError({final String? message}) =
       _$EmailValidationErrorImpl;
 
-  @override
   String? get message;
 
   /// Create a copy of LoginFailures
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EmailValidationErrorImplCopyWith<_$EmailValidationErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PasswordValidationErrorImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
+abstract class _$$PasswordValidationErrorImplCopyWith<$Res> {
   factory _$$PasswordValidationErrorImplCopyWith(
           _$PasswordValidationErrorImpl value,
           $Res Function(_$PasswordValidationErrorImpl) then) =
       __$$PasswordValidationErrorImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({String? message});
 }
@@ -668,16 +475,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     required TResult Function(String? message) emailAlreadyExists,
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) {
     return passwordValidationError(message);
   }
@@ -688,16 +486,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult? Function(String? message)? emailAlreadyExists,
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) {
     return passwordValidationError?.call(message);
   }
@@ -708,16 +497,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult Function(String? message)? emailAlreadyExists,
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) {
     if (passwordValidationError != null) {
@@ -733,16 +513,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     required TResult Function(EmailValidationError value) emailValidationError,
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) {
     return passwordValidationError(this);
   }
@@ -753,16 +524,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) {
     return passwordValidationError?.call(this);
   }
@@ -773,16 +535,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) {
     if (passwordValidationError != null) {
@@ -796,34 +549,32 @@ abstract class PasswordValidationError implements LoginFailures {
   const factory PasswordValidationError({final String? message}) =
       _$PasswordValidationErrorImpl;
 
-  @override
   String? get message;
 
   /// Create a copy of LoginFailures
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PasswordValidationErrorImplCopyWith<_$PasswordValidationErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$InvalidCredentialsImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$InvalidCredentialsImplCopyWith(_$InvalidCredentialsImpl value,
-          $Res Function(_$InvalidCredentialsImpl) then) =
-      __$$InvalidCredentialsImplCopyWithImpl<$Res>;
-  @override
+abstract class _$$CommonFailureImplCopyWith<$Res> {
+  factory _$$CommonFailureImplCopyWith(
+          _$CommonFailureImpl value, $Res Function(_$CommonFailureImpl) then) =
+      __$$CommonFailureImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String? message});
+  $Res call({CommonFailures failure});
+
+  $CommonFailuresCopyWith<$Res> get failure;
 }
 
 /// @nodoc
-class __$$InvalidCredentialsImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$InvalidCredentialsImpl>
-    implements _$$InvalidCredentialsImplCopyWith<$Res> {
-  __$$InvalidCredentialsImplCopyWithImpl(_$InvalidCredentialsImpl _value,
-      $Res Function(_$InvalidCredentialsImpl) _then)
+class __$$CommonFailureImplCopyWithImpl<$Res>
+    extends _$LoginFailuresCopyWithImpl<$Res, _$CommonFailureImpl>
+    implements _$$CommonFailureImplCopyWith<$Res> {
+  __$$CommonFailureImplCopyWithImpl(
+      _$CommonFailureImpl _value, $Res Function(_$CommonFailureImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LoginFailures
@@ -831,49 +582,58 @@ class __$$InvalidCredentialsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? failure = null,
   }) {
-    return _then(_$InvalidCredentialsImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_$CommonFailureImpl(
+      null == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as CommonFailures,
     ));
+  }
+
+  /// Create a copy of LoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CommonFailuresCopyWith<$Res> get failure {
+    return $CommonFailuresCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
   }
 }
 
 /// @nodoc
 
-class _$InvalidCredentialsImpl implements InvalidCredentials {
-  const _$InvalidCredentialsImpl({this.message});
+class _$CommonFailureImpl implements CommonFailure {
+  const _$CommonFailureImpl(this.failure);
 
   @override
-  final String? message;
+  final CommonFailures failure;
 
   @override
   String toString() {
-    return 'LoginFailures.invalidCredentials(message: $message)';
+    return 'LoginFailures.commonFailure(failure: $failure)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InvalidCredentialsImpl &&
-            (identical(other.message, message) || other.message == message));
+            other is _$CommonFailureImpl &&
+            (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode => Object.hash(runtimeType, failure);
 
   /// Create a copy of LoginFailures
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InvalidCredentialsImplCopyWith<_$InvalidCredentialsImpl> get copyWith =>
-      __$$InvalidCredentialsImplCopyWithImpl<_$InvalidCredentialsImpl>(
-          this, _$identity);
+  _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
+      __$$CommonFailureImplCopyWithImpl<_$CommonFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -881,18 +641,9 @@ class _$InvalidCredentialsImpl implements InvalidCredentials {
     required TResult Function(String? message) emailAlreadyExists,
     required TResult Function(String? message) emailValidationError,
     required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) {
-    return invalidCredentials(message);
+    return commonFailure(failure);
   }
 
   @override
@@ -901,18 +652,9 @@ class _$InvalidCredentialsImpl implements InvalidCredentials {
     TResult? Function(String? message)? emailAlreadyExists,
     TResult? Function(String? message)? emailValidationError,
     TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) {
-    return invalidCredentials?.call(message);
+    return commonFailure?.call(failure);
   }
 
   @override
@@ -921,20 +663,11 @@ class _$InvalidCredentialsImpl implements InvalidCredentials {
     TResult Function(String? message)? emailAlreadyExists,
     TResult Function(String? message)? emailValidationError,
     TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) {
-    if (invalidCredentials != null) {
-      return invalidCredentials(message);
+    if (commonFailure != null) {
+      return commonFailure(failure);
     }
     return orElse();
   }
@@ -946,18 +679,9 @@ class _$InvalidCredentialsImpl implements InvalidCredentials {
     required TResult Function(EmailValidationError value) emailValidationError,
     required TResult Function(PasswordValidationError value)
         passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) {
-    return invalidCredentials(this);
+    return commonFailure(this);
   }
 
   @override
@@ -966,18 +690,9 @@ class _$InvalidCredentialsImpl implements InvalidCredentials {
     TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult? Function(EmailValidationError value)? emailValidationError,
     TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) {
-    return invalidCredentials?.call(this);
+    return commonFailure?.call(this);
   }
 
   @override
@@ -986,1940 +701,25 @@ class _$InvalidCredentialsImpl implements InvalidCredentials {
     TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
     TResult Function(EmailValidationError value)? emailValidationError,
     TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) {
-    if (invalidCredentials != null) {
-      return invalidCredentials(this);
+    if (commonFailure != null) {
+      return commonFailure(this);
     }
     return orElse();
   }
 }
 
-abstract class InvalidCredentials implements LoginFailures {
-  const factory InvalidCredentials({final String? message}) =
-      _$InvalidCredentialsImpl;
+abstract class CommonFailure implements LoginFailures {
+  const factory CommonFailure(final CommonFailures failure) =
+      _$CommonFailureImpl;
 
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InvalidCredentialsImplCopyWith<_$InvalidCredentialsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$AdminNotApprovedImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$AdminNotApprovedImplCopyWith(_$AdminNotApprovedImpl value,
-          $Res Function(_$AdminNotApprovedImpl) then) =
-      __$$AdminNotApprovedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$AdminNotApprovedImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$AdminNotApprovedImpl>
-    implements _$$AdminNotApprovedImplCopyWith<$Res> {
-  __$$AdminNotApprovedImplCopyWithImpl(_$AdminNotApprovedImpl _value,
-      $Res Function(_$AdminNotApprovedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$AdminNotApprovedImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$AdminNotApprovedImpl implements AdminNotApproved {
-  const _$AdminNotApprovedImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.adminNotApproved(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AdminNotApprovedImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
+  CommonFailures get failure;
 
   /// Create a copy of LoginFailures
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AdminNotApprovedImplCopyWith<_$AdminNotApprovedImpl> get copyWith =>
-      __$$AdminNotApprovedImplCopyWithImpl<_$AdminNotApprovedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return adminNotApproved(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return adminNotApproved?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (adminNotApproved != null) {
-      return adminNotApproved(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return adminNotApproved(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return adminNotApproved?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (adminNotApproved != null) {
-      return adminNotApproved(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class AdminNotApproved implements LoginFailures {
-  const factory AdminNotApproved({final String? message}) =
-      _$AdminNotApprovedImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AdminNotApprovedImplCopyWith<_$AdminNotApprovedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NetworkFailureImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$NetworkFailureImplCopyWith(_$NetworkFailureImpl value,
-          $Res Function(_$NetworkFailureImpl) then) =
-      __$$NetworkFailureImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NetworkFailureImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$NetworkFailureImpl>
-    implements _$$NetworkFailureImplCopyWith<$Res> {
-  __$$NetworkFailureImplCopyWithImpl(
-      _$NetworkFailureImpl _value, $Res Function(_$NetworkFailureImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NetworkFailureImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NetworkFailureImpl implements NetworkFailure {
-  const _$NetworkFailureImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.networkFailure(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NetworkFailureImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NetworkFailureImplCopyWith<_$NetworkFailureImpl> get copyWith =>
-      __$$NetworkFailureImplCopyWithImpl<_$NetworkFailureImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return networkFailure(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return networkFailure?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (networkFailure != null) {
-      return networkFailure(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return networkFailure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return networkFailure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (networkFailure != null) {
-      return networkFailure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NetworkFailure implements LoginFailures {
-  const factory NetworkFailure({final String? message}) = _$NetworkFailureImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NetworkFailureImplCopyWith<_$NetworkFailureImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$BadRequestImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$BadRequestImplCopyWith(
-          _$BadRequestImpl value, $Res Function(_$BadRequestImpl) then) =
-      __$$BadRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$BadRequestImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$BadRequestImpl>
-    implements _$$BadRequestImplCopyWith<$Res> {
-  __$$BadRequestImplCopyWithImpl(
-      _$BadRequestImpl _value, $Res Function(_$BadRequestImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$BadRequestImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$BadRequestImpl implements BadRequest {
-  const _$BadRequestImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.badRequest(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BadRequestImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$BadRequestImplCopyWith<_$BadRequestImpl> get copyWith =>
-      __$$BadRequestImplCopyWithImpl<_$BadRequestImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return badRequest(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return badRequest?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (badRequest != null) {
-      return badRequest(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return badRequest(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return badRequest?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (badRequest != null) {
-      return badRequest(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class BadRequest implements LoginFailures {
-  const factory BadRequest({final String? message}) = _$BadRequestImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BadRequestImplCopyWith<_$BadRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$TokenExpiredImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$TokenExpiredImplCopyWith(
-          _$TokenExpiredImpl value, $Res Function(_$TokenExpiredImpl) then) =
-      __$$TokenExpiredImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$TokenExpiredImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$TokenExpiredImpl>
-    implements _$$TokenExpiredImplCopyWith<$Res> {
-  __$$TokenExpiredImplCopyWithImpl(
-      _$TokenExpiredImpl _value, $Res Function(_$TokenExpiredImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$TokenExpiredImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$TokenExpiredImpl implements TokenExpired {
-  const _$TokenExpiredImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.tokenExpired(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TokenExpiredImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TokenExpiredImplCopyWith<_$TokenExpiredImpl> get copyWith =>
-      __$$TokenExpiredImplCopyWithImpl<_$TokenExpiredImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return tokenExpired(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return tokenExpired?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (tokenExpired != null) {
-      return tokenExpired(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return tokenExpired(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return tokenExpired?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (tokenExpired != null) {
-      return tokenExpired(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TokenExpired implements LoginFailures {
-  const factory TokenExpired({final String? message}) = _$TokenExpiredImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TokenExpiredImplCopyWith<_$TokenExpiredImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UnexpectedImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$UnexpectedImplCopyWith(
-          _$UnexpectedImpl value, $Res Function(_$UnexpectedImpl) then) =
-      __$$UnexpectedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$UnexpectedImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$UnexpectedImpl>
-    implements _$$UnexpectedImplCopyWith<$Res> {
-  __$$UnexpectedImplCopyWithImpl(
-      _$UnexpectedImpl _value, $Res Function(_$UnexpectedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$UnexpectedImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UnexpectedImpl implements Unexpected {
-  const _$UnexpectedImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.unexpected(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnexpectedImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnexpectedImplCopyWith<_$UnexpectedImpl> get copyWith =>
-      __$$UnexpectedImplCopyWithImpl<_$UnexpectedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return unexpected(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return unexpected?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (unexpected != null) {
-      return unexpected(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return unexpected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return unexpected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (unexpected != null) {
-      return unexpected(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Unexpected implements LoginFailures {
-  const factory Unexpected({final String? message}) = _$UnexpectedImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UnexpectedImplCopyWith<_$UnexpectedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NoTokenAvailableImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$NoTokenAvailableImplCopyWith(_$NoTokenAvailableImpl value,
-          $Res Function(_$NoTokenAvailableImpl) then) =
-      __$$NoTokenAvailableImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NoTokenAvailableImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$NoTokenAvailableImpl>
-    implements _$$NoTokenAvailableImplCopyWith<$Res> {
-  __$$NoTokenAvailableImplCopyWithImpl(_$NoTokenAvailableImpl _value,
-      $Res Function(_$NoTokenAvailableImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NoTokenAvailableImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NoTokenAvailableImpl implements NoTokenAvailable {
-  const _$NoTokenAvailableImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.noTokenAvailable(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NoTokenAvailableImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NoTokenAvailableImplCopyWith<_$NoTokenAvailableImpl> get copyWith =>
-      __$$NoTokenAvailableImplCopyWithImpl<_$NoTokenAvailableImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return noTokenAvailable(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return noTokenAvailable?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (noTokenAvailable != null) {
-      return noTokenAvailable(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return noTokenAvailable(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return noTokenAvailable?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (noTokenAvailable != null) {
-      return noTokenAvailable(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NoTokenAvailable implements LoginFailures {
-  const factory NoTokenAvailable({final String? message}) =
-      _$NoTokenAvailableImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NoTokenAvailableImplCopyWith<_$NoTokenAvailableImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NotFoundImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$NotFoundImplCopyWith(
-          _$NotFoundImpl value, $Res Function(_$NotFoundImpl) then) =
-      __$$NotFoundImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NotFoundImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$NotFoundImpl>
-    implements _$$NotFoundImplCopyWith<$Res> {
-  __$$NotFoundImplCopyWithImpl(
-      _$NotFoundImpl _value, $Res Function(_$NotFoundImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NotFoundImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NotFoundImpl implements NotFound {
-  const _$NotFoundImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.notFound(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotFoundImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotFoundImplCopyWith<_$NotFoundImpl> get copyWith =>
-      __$$NotFoundImplCopyWithImpl<_$NotFoundImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return notFound(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return notFound?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notFound != null) {
-      return notFound(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return notFound(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return notFound?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notFound != null) {
-      return notFound(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NotFound implements LoginFailures {
-  const factory NotFound({final String? message}) = _$NotFoundImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotFoundImplCopyWith<_$NotFoundImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NotAcceptableImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$NotAcceptableImplCopyWith(
-          _$NotAcceptableImpl value, $Res Function(_$NotAcceptableImpl) then) =
-      __$$NotAcceptableImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NotAcceptableImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$NotAcceptableImpl>
-    implements _$$NotAcceptableImplCopyWith<$Res> {
-  __$$NotAcceptableImplCopyWithImpl(
-      _$NotAcceptableImpl _value, $Res Function(_$NotAcceptableImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NotAcceptableImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NotAcceptableImpl implements NotAcceptable {
-  const _$NotAcceptableImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.notAcceptable(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotAcceptableImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotAcceptableImplCopyWith<_$NotAcceptableImpl> get copyWith =>
-      __$$NotAcceptableImplCopyWithImpl<_$NotAcceptableImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return notAcceptable(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return notAcceptable?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notAcceptable != null) {
-      return notAcceptable(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return notAcceptable(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return notAcceptable?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notAcceptable != null) {
-      return notAcceptable(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NotAcceptable implements LoginFailures {
-  const factory NotAcceptable({final String? message}) = _$NotAcceptableImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotAcceptableImplCopyWith<_$NotAcceptableImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ServerErrorImplCopyWith<$Res>
-    implements $LoginFailuresCopyWith<$Res> {
-  factory _$$ServerErrorImplCopyWith(
-          _$ServerErrorImpl value, $Res Function(_$ServerErrorImpl) then) =
-      __$$ServerErrorImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$ServerErrorImplCopyWithImpl<$Res>
-    extends _$LoginFailuresCopyWithImpl<$Res, _$ServerErrorImpl>
-    implements _$$ServerErrorImplCopyWith<$Res> {
-  __$$ServerErrorImplCopyWithImpl(
-      _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$ServerErrorImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ServerErrorImpl implements ServerError {
-  const _$ServerErrorImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'LoginFailures.serverError(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ServerErrorImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
-      __$$ServerErrorImplCopyWithImpl<_$ServerErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) emailAlreadyExists,
-    required TResult Function(String? message) emailValidationError,
-    required TResult Function(String? message) passwordValidationError,
-    required TResult Function(String? message) invalidCredentials,
-    required TResult Function(String? message) adminNotApproved,
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return serverError(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? emailAlreadyExists,
-    TResult? Function(String? message)? emailValidationError,
-    TResult? Function(String? message)? passwordValidationError,
-    TResult? Function(String? message)? invalidCredentials,
-    TResult? Function(String? message)? adminNotApproved,
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return serverError?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? emailAlreadyExists,
-    TResult Function(String? message)? emailValidationError,
-    TResult Function(String? message)? passwordValidationError,
-    TResult Function(String? message)? invalidCredentials,
-    TResult Function(String? message)? adminNotApproved,
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (serverError != null) {
-      return serverError(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(EmailAlreadyExists value) emailAlreadyExists,
-    required TResult Function(EmailValidationError value) emailValidationError,
-    required TResult Function(PasswordValidationError value)
-        passwordValidationError,
-    required TResult Function(InvalidCredentials value) invalidCredentials,
-    required TResult Function(AdminNotApproved value) adminNotApproved,
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return serverError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult? Function(EmailValidationError value)? emailValidationError,
-    TResult? Function(PasswordValidationError value)? passwordValidationError,
-    TResult? Function(InvalidCredentials value)? invalidCredentials,
-    TResult? Function(AdminNotApproved value)? adminNotApproved,
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return serverError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(EmailAlreadyExists value)? emailAlreadyExists,
-    TResult Function(EmailValidationError value)? emailValidationError,
-    TResult Function(PasswordValidationError value)? passwordValidationError,
-    TResult Function(InvalidCredentials value)? invalidCredentials,
-    TResult Function(AdminNotApproved value)? adminNotApproved,
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (serverError != null) {
-      return serverError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ServerError implements LoginFailures {
-  const factory ServerError({final String? message}) = _$ServerErrorImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of LoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
+  _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

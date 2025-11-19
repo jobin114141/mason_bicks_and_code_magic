@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:login_base/core/common_failures/common_failures.dart';
 import 'package:login_base/features/auth/login/domain/failures/failures.dart';
 import 'package:login_base/features/auth/login/domain/i_login_repository.dart';
 import 'package:login_base/features/auth/login/domain/models/user.dart';
@@ -18,8 +19,8 @@ class LoginRepositiryImp extends ILoginRepository {
             loginId: "2");
         return Right(user);
       } else {
-        return const Left(
-            LoginFailures.serverError(message: 'Invalid credentials'));
+        return const Left(LoginFailures.commonFailure(
+            CommonFailures.serverError("Invalid email or password")));
       }
     });
   }

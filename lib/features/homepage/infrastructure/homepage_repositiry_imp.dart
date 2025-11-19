@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/core/apis/api_endpoints.dart';
+import 'package:login_base/core/common_failures/common_failures.dart';
 import 'package:login_base/core/extensions/better_client.dart';
 import 'package:login_base/features/homepage/domain/failures/failures.dart';
 import 'package:login_base/features/homepage/domain/i_homepage_repository.dart';
@@ -11,7 +12,6 @@ import 'package:login_base/features/homepage/domain/models/product_model.dart';
 class HomepageRepositiryImp extends IHomepageRepository {
   final Ref ref;
   HomepageRepositiryImp(this.ref);
-  
 
   @override
   Future<Either<HomepageFailures, List<Product>>> fetchProducts() async {
@@ -25,35 +25,45 @@ class HomepageRepositiryImp extends IHomepageRepository {
         return right(model.products);
       }
 
-      return left(HomepageFailures.serverError(
+      return left(HomepageFailures.commonFailure(CommonFailures.serverError(
         response.data['message'] ?? "Unexpected server error",
-      ));
+      )));
     } catch (e) {
       if (e is DioException) {
         print("error deteched");
 
         final statusCode = e.response?.statusCode ?? 0;
         final errorMessage = e.response?.data['message'] ?? 'Unexpected error';
-        print(statusCode);
-        print(errorMessage);
+
+        if (statusCode == 0) {
+          return left(const HomepageFailures.commonFailure(
+              CommonFailures.networkFailure()));
+        }
         if (statusCode == 400) {
-          return left(HomepageFailures.badRequest(errorMessage));
+          return left(HomepageFailures.commonFailure(CommonFailures.badRequest(
+            errorMessage,
+          )));
         }
         if (statusCode == 401) {
-          return left(const HomepageFailures.tokenExpired());
+          return left(const HomepageFailures.commonFailure(
+              CommonFailures.tokenExpired()));
         }
-        if (statusCode == 406) {
-          return left(HomepageFailures.notAcceptable(errorMessage));
-        }
+
         if (statusCode == 406 || statusCode == 403 || statusCode == 500) {
-          return left(HomepageFailures.serverError(errorMessage));
+          return left(HomepageFailures.commonFailure(CommonFailures.serverError(
+            errorMessage,
+          )));
         } else {
-          return left(const HomepageFailures.networkFailure());
+          return left(
+              HomepageFailures.commonFailure(CommonFailures.networkFailure(
+            errorMessage,
+          )));
         }
       }
 
       print("Unexpected error: $e");
-      return left(const HomepageFailures.unexpected());
+      return left(
+          const HomepageFailures.commonFailure(CommonFailures.unexpected()));
     }
   }
 }
