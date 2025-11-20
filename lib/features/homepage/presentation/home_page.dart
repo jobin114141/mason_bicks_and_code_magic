@@ -5,19 +5,31 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/features/homepage/application/homepage_notifer.dart';
+import 'package:login_base/features/homepage/application/homepage_state.dart';
 
 class HomePage extends HookConsumerWidget {
   const HomePage({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    print("Fetching productss... 1");
     final state = ref.watch(homePageNotifierProvider);
-
     useEffect(() {
       Future.microtask(() {
+        print("Fetching productss... 2");
         ref.read(homePageNotifierProvider.notifier).getProducts();
       });
       return null;
     }, []);
+
+    ref.listen<HomeState>(homePageNotifierProvider, (previous, next) {
+      if (next.isLoading) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Loading products...")),
+        );
+      }
+      if (next.error != null) {}
+    });
 
     return Scaffold(
       appBar: AppBar(title: const Text("Home Page")),

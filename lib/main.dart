@@ -22,12 +22,11 @@ class MyApp extends ConsumerWidget {
       builder: (context, child) {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          title: 'HumbleHearts',
+          title: 'Login Base',
           theme: myTheamSetting(),
           routerDelegate: router.routerDelegate,
           routeInformationParser: router.routeInformationParser,
           routeInformationProvider: router.routeInformationProvider,
-    
         );
       },
     );
