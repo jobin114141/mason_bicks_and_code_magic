@@ -198,8 +198,8 @@ class AccountPage extends ConsumerWidget {
                         title: 'Log out',
                         onTap: () async {
                           await UserSharedPreferenceServices.clearAll();
+                          await UserSharedPreferenceServices.hasSeenOnBoardingScreen(true);
                           ref.invalidate(isTokenVerifiedProvider);
-                       
                         },
                       ),
                     ],

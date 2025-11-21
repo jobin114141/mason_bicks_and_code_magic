@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
 
-class OnBoardingScreen extends HookConsumerWidget {
-  const OnBoardingScreen({super.key});
+class SplashScreen extends HookConsumerWidget {
+  const SplashScreen({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {

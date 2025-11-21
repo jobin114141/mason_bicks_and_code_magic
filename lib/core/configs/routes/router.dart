@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_base/features/account/presentation/account_page.dart';
+import 'package:login_base/features/auth/login/application/checkLogin/is_first_launch_provider.dart';
 import 'package:login_base/features/auth/login/application/checkLogin/is_token_verified_provider.dart';
 import 'package:login_base/features/auth/login/application/user_details/user_details_notifer.dart';
 import 'package:login_base/features/auth/login/presenatstion/login_page.dart';
@@ -11,7 +12,9 @@ import 'package:login_base/features/auth/reg/presentation/reg_page.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
 import 'package:login_base/features/mainpage/presentation/main_page.dart';
 import 'package:login_base/features/homepage/presentation/home_page.dart';
-import 'package:login_base/on_boarding_screen.dart';
+import 'package:login_base/features/on_Boarding_screens/on_boarding_screen_1.dart';
+import 'package:login_base/features/on_Boarding_screens/on_boarding_screen_2.dart';
+import 'package:login_base/splash_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'redirection.dart';
@@ -19,15 +22,28 @@ part 'redirection.dart';
 final routeProvider = Provider((ref) {
   return GoRouter(
     debugLogDiagnostics: true,
-    initialLocation: '/onboarding',
+    initialLocation: '/splashScreen',
     redirect: (context, state) {
+      print("Redirecting from: ");
+      print( state.matchedLocation);
       return handleRedirect(context, state, ref);
+      
     },
     routes: [
       GoRoute(
-        name: RouterName.onboarding,
-        path: '/onboarding',
-        builder: (context, state) => const OnBoardingScreen(),
+        name: RouterName.splashScreen,
+        path: '/splashScreen',
+        builder: (context, state) => const SplashScreen(),
+      ),
+      GoRoute(
+        name: RouterName.onBoardingScreen1,
+        path: '/onBoardingScreen1',
+        builder: (context, state) => const OnBoardingScreen1(),
+      ),
+      GoRoute(
+        name: RouterName.onBoardingScreen2,
+        path: '/onBoardingScreen2',
+        builder: (context, state) => const OnBoardingScreen2(),
       ),
       GoRoute(
         name: RouterName.loginPage,

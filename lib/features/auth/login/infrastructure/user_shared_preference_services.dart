@@ -2,6 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class UserSharedPreferenceServices {
   static const String _tokenKey = "userToken";
+  static const String _hasSeenOnBoardingScreen = "hasSeenOnBoardingScreen";
   static const String _emailKey = "userEmail";
   static const String _nameKey = "userName";
   static const String _phoneKey = "userPhone";
@@ -20,6 +21,12 @@ class UserSharedPreferenceServices {
   static Future<bool> saveToken(String token) async {
     final prefs = await _instance;
     return prefs.setString(_tokenKey, token);
+  }
+
+  //has Seen On Boarding Screen
+  static Future<bool> hasSeenOnBoardingScreen(bool seen) async {
+    final prefs = await _instance;
+    return prefs.setBool(_hasSeenOnBoardingScreen, seen);
   }
 
   //profilePic
@@ -56,6 +63,11 @@ class UserSharedPreferenceServices {
   static Future<String?> getToken() async {
     final prefs = await _instance;
     return prefs.getString(_tokenKey);
+  }
+
+  static Future<bool?> getHasSeenOnBoardingScreen() async {
+    final prefs = await _instance;
+    return prefs.getBool(_hasSeenOnBoardingScreen);
   }
 
   static Future<String?> getProfilePic() async {
