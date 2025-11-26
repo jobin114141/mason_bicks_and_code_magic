@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/features/account/presentation/widgets/widgets.dart';
 import 'package:login_base/features/auth/login/application/checkLogin/is_token_verified_provider.dart';
@@ -198,8 +199,12 @@ class AccountPage extends ConsumerWidget {
                         title: 'Log out',
                         onTap: () async {
                           await UserSharedPreferenceServices.clearAll();
-                          await UserSharedPreferenceServices.hasSeenOnBoardingScreen(true);
+                          await UserSharedPreferenceServices
+                              .hasSeenOnBoardingScreen(true);
                           ref.invalidate(isTokenVerifiedProvider);
+                          if (context.mounted) {
+                            GoRouter.of(context).go('/loginPage');
+                          }
                         },
                       ),
                     ],

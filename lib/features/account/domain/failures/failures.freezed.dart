@@ -16,78 +16,36 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AccountFailures {
-  String? get message => throw _privateConstructorUsedError;
+  CommonFailures get failure => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -105,7 +63,9 @@ abstract class $AccountFailuresCopyWith<$Res> {
           AccountFailures value, $Res Function(AccountFailures) then) =
       _$AccountFailuresCopyWithImpl<$Res, AccountFailures>;
   @useResult
-  $Res call({String? message});
+  $Res call({CommonFailures failure});
+
+  $CommonFailuresCopyWith<$Res> get failure;
 }
 
 /// @nodoc
@@ -123,34 +83,47 @@ class _$AccountFailuresCopyWithImpl<$Res, $Val extends AccountFailures>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? failure = null,
   }) {
     return _then(_value.copyWith(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
+      failure: null == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as CommonFailures,
     ) as $Val);
   }
+
+  /// Create a copy of AccountFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CommonFailuresCopyWith<$Res> get failure {
+    return $CommonFailuresCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$NetworkFailureImplCopyWith<$Res>
+abstract class _$$CommonFailureImplCopyWith<$Res>
     implements $AccountFailuresCopyWith<$Res> {
-  factory _$$NetworkFailureImplCopyWith(_$NetworkFailureImpl value,
-          $Res Function(_$NetworkFailureImpl) then) =
-      __$$NetworkFailureImplCopyWithImpl<$Res>;
+  factory _$$CommonFailureImplCopyWith(
+          _$CommonFailureImpl value, $Res Function(_$CommonFailureImpl) then) =
+      __$$CommonFailureImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? message});
+  $Res call({CommonFailures failure});
+
+  @override
+  $CommonFailuresCopyWith<$Res> get failure;
 }
 
 /// @nodoc
-class __$$NetworkFailureImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$NetworkFailureImpl>
-    implements _$$NetworkFailureImplCopyWith<$Res> {
-  __$$NetworkFailureImplCopyWithImpl(
-      _$NetworkFailureImpl _value, $Res Function(_$NetworkFailureImpl) _then)
+class __$$CommonFailureImplCopyWithImpl<$Res>
+    extends _$AccountFailuresCopyWithImpl<$Res, _$CommonFailureImpl>
+    implements _$$CommonFailureImplCopyWith<$Res> {
+  __$$CommonFailureImplCopyWithImpl(
+      _$CommonFailureImpl _value, $Res Function(_$CommonFailureImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AccountFailures
@@ -158,95 +131,73 @@ class __$$NetworkFailureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? failure = null,
   }) {
-    return _then(_$NetworkFailureImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_$CommonFailureImpl(
+      null == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as CommonFailures,
     ));
   }
 }
 
 /// @nodoc
 
-class _$NetworkFailureImpl implements NetworkFailure {
-  const _$NetworkFailureImpl({this.message});
+class _$CommonFailureImpl implements CommonFailure {
+  const _$CommonFailureImpl(this.failure);
 
   @override
-  final String? message;
+  final CommonFailures failure;
 
   @override
   String toString() {
-    return 'AccountFailures.networkFailure(message: $message)';
+    return 'AccountFailures.commonFailure(failure: $failure)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NetworkFailureImpl &&
-            (identical(other.message, message) || other.message == message));
+            other is _$CommonFailureImpl &&
+            (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode => Object.hash(runtimeType, failure);
 
   /// Create a copy of AccountFailures
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$NetworkFailureImplCopyWith<_$NetworkFailureImpl> get copyWith =>
-      __$$NetworkFailureImplCopyWithImpl<_$NetworkFailureImpl>(
-          this, _$identity);
+  _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
+      __$$CommonFailureImplCopyWithImpl<_$CommonFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
+    required TResult Function(CommonFailures failure) commonFailure,
   }) {
-    return networkFailure(message);
+    return commonFailure(failure);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
+    TResult? Function(CommonFailures failure)? commonFailure,
   }) {
-    return networkFailure?.call(message);
+    return commonFailure?.call(failure);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
+    TResult Function(CommonFailures failure)? commonFailure,
     required TResult orElse(),
   }) {
-    if (networkFailure != null) {
-      return networkFailure(message);
+    if (commonFailure != null) {
+      return commonFailure(failure);
     }
     return orElse();
   }
@@ -254,1325 +205,43 @@ class _$NetworkFailureImpl implements NetworkFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
+    required TResult Function(CommonFailure value) commonFailure,
   }) {
-    return networkFailure(this);
+    return commonFailure(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
+    TResult? Function(CommonFailure value)? commonFailure,
   }) {
-    return networkFailure?.call(this);
+    return commonFailure?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
+    TResult Function(CommonFailure value)? commonFailure,
     required TResult orElse(),
   }) {
-    if (networkFailure != null) {
-      return networkFailure(this);
+    if (commonFailure != null) {
+      return commonFailure(this);
     }
     return orElse();
   }
 }
 
-abstract class NetworkFailure implements AccountFailures {
-  const factory NetworkFailure({final String? message}) = _$NetworkFailureImpl;
+abstract class CommonFailure implements AccountFailures {
+  const factory CommonFailure(final CommonFailures failure) =
+      _$CommonFailureImpl;
 
   @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NetworkFailureImplCopyWith<_$NetworkFailureImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$BadRequestImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$BadRequestImplCopyWith(
-          _$BadRequestImpl value, $Res Function(_$BadRequestImpl) then) =
-      __$$BadRequestImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$BadRequestImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$BadRequestImpl>
-    implements _$$BadRequestImplCopyWith<$Res> {
-  __$$BadRequestImplCopyWithImpl(
-      _$BadRequestImpl _value, $Res Function(_$BadRequestImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$BadRequestImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$BadRequestImpl implements BadRequest {
-  const _$BadRequestImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.badRequest(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BadRequestImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$BadRequestImplCopyWith<_$BadRequestImpl> get copyWith =>
-      __$$BadRequestImplCopyWithImpl<_$BadRequestImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return badRequest(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return badRequest?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (badRequest != null) {
-      return badRequest(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return badRequest(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return badRequest?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (badRequest != null) {
-      return badRequest(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class BadRequest implements AccountFailures {
-  const factory BadRequest({final String? message}) = _$BadRequestImpl;
-
-  @override
-  String? get message;
+  CommonFailures get failure;
 
   /// Create a copy of AccountFailures
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BadRequestImplCopyWith<_$BadRequestImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$TokenExpiredImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$TokenExpiredImplCopyWith(
-          _$TokenExpiredImpl value, $Res Function(_$TokenExpiredImpl) then) =
-      __$$TokenExpiredImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$TokenExpiredImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$TokenExpiredImpl>
-    implements _$$TokenExpiredImplCopyWith<$Res> {
-  __$$TokenExpiredImplCopyWithImpl(
-      _$TokenExpiredImpl _value, $Res Function(_$TokenExpiredImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$TokenExpiredImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$TokenExpiredImpl implements TokenExpired {
-  const _$TokenExpiredImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.tokenExpired(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TokenExpiredImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TokenExpiredImplCopyWith<_$TokenExpiredImpl> get copyWith =>
-      __$$TokenExpiredImplCopyWithImpl<_$TokenExpiredImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return tokenExpired(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return tokenExpired?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (tokenExpired != null) {
-      return tokenExpired(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return tokenExpired(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return tokenExpired?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (tokenExpired != null) {
-      return tokenExpired(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class TokenExpired implements AccountFailures {
-  const factory TokenExpired({final String? message}) = _$TokenExpiredImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TokenExpiredImplCopyWith<_$TokenExpiredImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UnexpectedImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$UnexpectedImplCopyWith(
-          _$UnexpectedImpl value, $Res Function(_$UnexpectedImpl) then) =
-      __$$UnexpectedImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$UnexpectedImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$UnexpectedImpl>
-    implements _$$UnexpectedImplCopyWith<$Res> {
-  __$$UnexpectedImplCopyWithImpl(
-      _$UnexpectedImpl _value, $Res Function(_$UnexpectedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$UnexpectedImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$UnexpectedImpl implements Unexpected {
-  const _$UnexpectedImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.unexpected(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnexpectedImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnexpectedImplCopyWith<_$UnexpectedImpl> get copyWith =>
-      __$$UnexpectedImplCopyWithImpl<_$UnexpectedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return unexpected(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return unexpected?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (unexpected != null) {
-      return unexpected(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return unexpected(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return unexpected?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (unexpected != null) {
-      return unexpected(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Unexpected implements AccountFailures {
-  const factory Unexpected({final String? message}) = _$UnexpectedImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UnexpectedImplCopyWith<_$UnexpectedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NoTokenAvailableImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$NoTokenAvailableImplCopyWith(_$NoTokenAvailableImpl value,
-          $Res Function(_$NoTokenAvailableImpl) then) =
-      __$$NoTokenAvailableImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NoTokenAvailableImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$NoTokenAvailableImpl>
-    implements _$$NoTokenAvailableImplCopyWith<$Res> {
-  __$$NoTokenAvailableImplCopyWithImpl(_$NoTokenAvailableImpl _value,
-      $Res Function(_$NoTokenAvailableImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NoTokenAvailableImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NoTokenAvailableImpl implements NoTokenAvailable {
-  const _$NoTokenAvailableImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.noTokenAvailable(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NoTokenAvailableImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NoTokenAvailableImplCopyWith<_$NoTokenAvailableImpl> get copyWith =>
-      __$$NoTokenAvailableImplCopyWithImpl<_$NoTokenAvailableImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return noTokenAvailable(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return noTokenAvailable?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (noTokenAvailable != null) {
-      return noTokenAvailable(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return noTokenAvailable(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return noTokenAvailable?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (noTokenAvailable != null) {
-      return noTokenAvailable(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NoTokenAvailable implements AccountFailures {
-  const factory NoTokenAvailable({final String? message}) =
-      _$NoTokenAvailableImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NoTokenAvailableImplCopyWith<_$NoTokenAvailableImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NotFoundImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$NotFoundImplCopyWith(
-          _$NotFoundImpl value, $Res Function(_$NotFoundImpl) then) =
-      __$$NotFoundImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NotFoundImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$NotFoundImpl>
-    implements _$$NotFoundImplCopyWith<$Res> {
-  __$$NotFoundImplCopyWithImpl(
-      _$NotFoundImpl _value, $Res Function(_$NotFoundImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NotFoundImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NotFoundImpl implements NotFound {
-  const _$NotFoundImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.notFound(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotFoundImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotFoundImplCopyWith<_$NotFoundImpl> get copyWith =>
-      __$$NotFoundImplCopyWithImpl<_$NotFoundImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return notFound(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return notFound?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notFound != null) {
-      return notFound(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return notFound(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return notFound?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notFound != null) {
-      return notFound(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NotFound implements AccountFailures {
-  const factory NotFound({final String? message}) = _$NotFoundImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotFoundImplCopyWith<_$NotFoundImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$NotAcceptableImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$NotAcceptableImplCopyWith(
-          _$NotAcceptableImpl value, $Res Function(_$NotAcceptableImpl) then) =
-      __$$NotAcceptableImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$NotAcceptableImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$NotAcceptableImpl>
-    implements _$$NotAcceptableImplCopyWith<$Res> {
-  __$$NotAcceptableImplCopyWithImpl(
-      _$NotAcceptableImpl _value, $Res Function(_$NotAcceptableImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$NotAcceptableImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$NotAcceptableImpl implements NotAcceptable {
-  const _$NotAcceptableImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.notAcceptable(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NotAcceptableImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NotAcceptableImplCopyWith<_$NotAcceptableImpl> get copyWith =>
-      __$$NotAcceptableImplCopyWithImpl<_$NotAcceptableImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return notAcceptable(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return notAcceptable?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notAcceptable != null) {
-      return notAcceptable(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return notAcceptable(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return notAcceptable?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (notAcceptable != null) {
-      return notAcceptable(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class NotAcceptable implements AccountFailures {
-  const factory NotAcceptable({final String? message}) = _$NotAcceptableImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotAcceptableImplCopyWith<_$NotAcceptableImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ServerErrorImplCopyWith<$Res>
-    implements $AccountFailuresCopyWith<$Res> {
-  factory _$$ServerErrorImplCopyWith(
-          _$ServerErrorImpl value, $Res Function(_$ServerErrorImpl) then) =
-      __$$ServerErrorImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? message});
-}
-
-/// @nodoc
-class __$$ServerErrorImplCopyWithImpl<$Res>
-    extends _$AccountFailuresCopyWithImpl<$Res, _$ServerErrorImpl>
-    implements _$$ServerErrorImplCopyWith<$Res> {
-  __$$ServerErrorImplCopyWithImpl(
-      _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = freezed,
-  }) {
-    return _then(_$ServerErrorImpl(
-      message: freezed == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ServerErrorImpl implements ServerError {
-  const _$ServerErrorImpl({this.message});
-
-  @override
-  final String? message;
-
-  @override
-  String toString() {
-    return 'AccountFailures.serverError(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ServerErrorImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
-      __$$ServerErrorImplCopyWithImpl<_$ServerErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String? message) networkFailure,
-    required TResult Function(String? message) badRequest,
-    required TResult Function(String? message) tokenExpired,
-    required TResult Function(String? message) unexpected,
-    required TResult Function(String? message) noTokenAvailable,
-    required TResult Function(String? message) notFound,
-    required TResult Function(String? message) notAcceptable,
-    required TResult Function(String? message) serverError,
-  }) {
-    return serverError(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? message)? networkFailure,
-    TResult? Function(String? message)? badRequest,
-    TResult? Function(String? message)? tokenExpired,
-    TResult? Function(String? message)? unexpected,
-    TResult? Function(String? message)? noTokenAvailable,
-    TResult? Function(String? message)? notFound,
-    TResult? Function(String? message)? notAcceptable,
-    TResult? Function(String? message)? serverError,
-  }) {
-    return serverError?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? message)? networkFailure,
-    TResult Function(String? message)? badRequest,
-    TResult Function(String? message)? tokenExpired,
-    TResult Function(String? message)? unexpected,
-    TResult Function(String? message)? noTokenAvailable,
-    TResult Function(String? message)? notFound,
-    TResult Function(String? message)? notAcceptable,
-    TResult Function(String? message)? serverError,
-    required TResult orElse(),
-  }) {
-    if (serverError != null) {
-      return serverError(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(NetworkFailure value) networkFailure,
-    required TResult Function(BadRequest value) badRequest,
-    required TResult Function(TokenExpired value) tokenExpired,
-    required TResult Function(Unexpected value) unexpected,
-    required TResult Function(NoTokenAvailable value) noTokenAvailable,
-    required TResult Function(NotFound value) notFound,
-    required TResult Function(NotAcceptable value) notAcceptable,
-    required TResult Function(ServerError value) serverError,
-  }) {
-    return serverError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NetworkFailure value)? networkFailure,
-    TResult? Function(BadRequest value)? badRequest,
-    TResult? Function(TokenExpired value)? tokenExpired,
-    TResult? Function(Unexpected value)? unexpected,
-    TResult? Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult? Function(NotFound value)? notFound,
-    TResult? Function(NotAcceptable value)? notAcceptable,
-    TResult? Function(ServerError value)? serverError,
-  }) {
-    return serverError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(NetworkFailure value)? networkFailure,
-    TResult Function(BadRequest value)? badRequest,
-    TResult Function(TokenExpired value)? tokenExpired,
-    TResult Function(Unexpected value)? unexpected,
-    TResult Function(NoTokenAvailable value)? noTokenAvailable,
-    TResult Function(NotFound value)? notFound,
-    TResult Function(NotAcceptable value)? notAcceptable,
-    TResult Function(ServerError value)? serverError,
-    required TResult orElse(),
-  }) {
-    if (serverError != null) {
-      return serverError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ServerError implements AccountFailures {
-  const factory ServerError({final String? message}) = _$ServerErrorImpl;
-
-  @override
-  String? get message;
-
-  /// Create a copy of AccountFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
+  _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

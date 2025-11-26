@@ -18,9 +18,9 @@ class OnBoardingScreen2 extends ConsumerWidget {
           TextButton(
               onPressed: () async {
                 // SAVE STATE FIRST
-                await UserSharedPreferenceServices.hasSeenOnBoardingScreen(true);
+                await UserSharedPreferenceServices.hasSeenOnBoardingScreen(
+                    true);
 
-             
                 if (context.mounted) {
                   context.goNamed(RouterName.loginPage);
                 }
