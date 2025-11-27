@@ -5,10 +5,11 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:login_base/features/auth/login/application/login/login_notifier.dart';
-import 'package:login_base/features/auth/login/application/user_details/user_details_notifer.dart';
+import 'package:login_base/core/theme/dimensions.dart';
+import 'package:login_base/features/auth/email_login/application/login/login_notifier.dart';
+import 'package:login_base/features/auth/email_login/application/user_details/user_details_notifer.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
-import 'package:login_base/core/widgets/other_widgets/other_widgets.dart';
+import 'package:login_base/core/widgets/other_widgets.dart';
 
 class LoginPage extends HookConsumerWidget {
   const LoginPage({super.key});
@@ -19,10 +20,9 @@ class LoginPage extends HookConsumerWidget {
         useTextEditingController(text: "jobingeorge.wr@gmail.com");
     final passwordController = useTextEditingController(text: "A12345678@");
 
-    ref.listen<LoginState>(loginNotifierProvider, (previous, next)async {
+    ref.listen<LoginState>(loginNotifierProvider, (previous, next) async {
       next.maybeWhen(
         success: (user) {
-
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login Successfuly complted')),
           );
@@ -53,14 +53,20 @@ class LoginPage extends HookConsumerWidget {
             child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TextField(
-          controller: emailController,
-          decoration: const InputDecoration(labelText: 'Email'),
+        Padding(
+          padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+          child: TextField(
+            controller: emailController,
+            decoration: const InputDecoration(labelText: 'Email'),
+          ),
         ),
-        TextField(
-          controller: passwordController,
-          decoration: const InputDecoration(labelText: 'Password'),
-          obscureText: true,
+        Padding(
+          padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
+          child: TextField(
+            controller: passwordController,
+            decoration: const InputDecoration(labelText: 'Password'),
+            obscureText: true,
+          ),
         ),
         ElevatedButton(
             onPressed: () {

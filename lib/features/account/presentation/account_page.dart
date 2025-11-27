@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/features/account/presentation/widgets/widgets.dart';
-import 'package:login_base/features/auth/login/application/checkLogin/is_token_verified_provider.dart';
-import 'package:login_base/features/auth/login/application/user_details/user_details_notifer.dart';
-import 'package:login_base/features/auth/login/infrastructure/user_shared_preference_services.dart';
+import 'package:login_base/features/auth/email_login/application/checkLogin/is_token_verified_provider.dart';
+import 'package:login_base/features/auth/email_login/application/user_details/user_details_notifer.dart';
+import 'package:login_base/features/auth/email_login/infrastructure/user_shared_preference_services.dart';
 
 class AccountPage extends ConsumerWidget {
   const AccountPage({super.key});

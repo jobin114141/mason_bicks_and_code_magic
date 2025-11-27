@@ -5,6 +5,7 @@ import 'package:login_base/core/configs/routes/router.dart';
 import 'package:login_base/core/theme/app_text_styles.dart';
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const ProviderScope(child: MyApp()));

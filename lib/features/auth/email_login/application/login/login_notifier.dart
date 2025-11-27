@@ -1,12 +1,12 @@
 // ignore_for_file: avoid_print
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:login_base/features/auth/login/application/checkLogin/is_token_verified_provider.dart';
-import 'package:login_base/features/auth/login/domain/models/user.dart';
+import 'package:login_base/features/auth/email_login/application/checkLogin/is_token_verified_provider.dart';
+import 'package:login_base/features/auth/email_login/domain/models/user.dart';
 import 'package:login_base/core/value_object.dart';
-import 'package:login_base/features/auth/login/domain/failures/failures.dart';
-import 'package:login_base/features/auth/login/infrastructure/repo_provider/login_repository_provider.dart';
-import 'package:login_base/features/auth/login/infrastructure/user_shared_preference_services.dart';
+import 'package:login_base/features/auth/email_login/domain/failures/failures.dart';
+import 'package:login_base/features/auth/email_login/infrastructure/repo_provider/login_repository_provider.dart';
+import 'package:login_base/features/auth/email_login/infrastructure/user_shared_preference_services.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'login_notifier.freezed.dart';

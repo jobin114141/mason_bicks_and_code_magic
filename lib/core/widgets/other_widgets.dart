@@ -14,7 +14,7 @@ Widget dividerWithText(String dividerText, {Color? textColor}) {
         child: Divider(
           thickness: 1.2,
           height: 10,
-          color: UserColor.secondaryColor,
+          color: AppColor.secondaryColor,
         ),
       ),
       Container(
@@ -25,7 +25,7 @@ Widget dividerWithText(String dividerText, {Color? textColor}) {
         child: Divider(
           thickness: 1.2,
           height: 10,
-          color: UserColor.secondaryColor,
+          color: AppColor.secondaryColor,
         ),
       )
     ],

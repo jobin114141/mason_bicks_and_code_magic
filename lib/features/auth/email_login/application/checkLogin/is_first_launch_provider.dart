@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:login_base/features/auth/login/infrastructure/user_shared_preference_services.dart';
+import 'package:login_base/features/auth/email_login/infrastructure/user_shared_preference_services.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'is_first_launch_provider.g.dart';

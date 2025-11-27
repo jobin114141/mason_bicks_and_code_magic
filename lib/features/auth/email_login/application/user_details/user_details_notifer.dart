@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:login_base/features/auth/login/infrastructure/user_shared_preference_services.dart';
+import 'package:login_base/features/auth/email_login/infrastructure/user_shared_preference_services.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'user_details_notifer.freezed.dart';

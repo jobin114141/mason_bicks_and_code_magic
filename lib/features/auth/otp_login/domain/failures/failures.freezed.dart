@@ -1,0 +1,233 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'failures.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+
+/// @nodoc
+mixin _$OtpLoginFailures {
+  CommonFailures get failure => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(CommonFailures failure) commonFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(CommonFailures failure)? commonFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(CommonFailures failure)? commonFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CommonFailure value) commonFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CommonFailure value)? commonFailure,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CommonFailure value)? commonFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $OtpLoginFailuresCopyWith<OtpLoginFailures> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $OtpLoginFailuresCopyWith<$Res> {
+  factory $OtpLoginFailuresCopyWith(
+          OtpLoginFailures value, $Res Function(OtpLoginFailures) then) =
+      _$OtpLoginFailuresCopyWithImpl<$Res, OtpLoginFailures>;
+  @useResult
+  $Res call({CommonFailures failure});
+}
+
+/// @nodoc
+class _$OtpLoginFailuresCopyWithImpl<$Res, $Val extends OtpLoginFailures>
+    implements $OtpLoginFailuresCopyWith<$Res> {
+  _$OtpLoginFailuresCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failure = freezed,
+  }) {
+    return _then(_value.copyWith(
+      failure: freezed == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as CommonFailures,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CommonFailureImplCopyWith<$Res>
+    implements $OtpLoginFailuresCopyWith<$Res> {
+  factory _$$CommonFailureImplCopyWith(
+          _$CommonFailureImpl value, $Res Function(_$CommonFailureImpl) then) =
+      __$$CommonFailureImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({CommonFailures failure});
+}
+
+/// @nodoc
+class __$$CommonFailureImplCopyWithImpl<$Res>
+    extends _$OtpLoginFailuresCopyWithImpl<$Res, _$CommonFailureImpl>
+    implements _$$CommonFailureImplCopyWith<$Res> {
+  __$$CommonFailureImplCopyWithImpl(
+      _$CommonFailureImpl _value, $Res Function(_$CommonFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failure = freezed,
+  }) {
+    return _then(_$CommonFailureImpl(
+      freezed == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as CommonFailures,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CommonFailureImpl implements CommonFailure {
+  const _$CommonFailureImpl(this.failure);
+
+  @override
+  final CommonFailures failure;
+
+  @override
+  String toString() {
+    return 'OtpLoginFailures.commonFailure(failure: $failure)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CommonFailureImpl &&
+            const DeepCollectionEquality().equals(other.failure, failure));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
+      __$$CommonFailureImplCopyWithImpl<_$CommonFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(CommonFailures failure) commonFailure,
+  }) {
+    return commonFailure(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(CommonFailures failure)? commonFailure,
+  }) {
+    return commonFailure?.call(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(CommonFailures failure)? commonFailure,
+    required TResult orElse(),
+  }) {
+    if (commonFailure != null) {
+      return commonFailure(failure);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CommonFailure value) commonFailure,
+  }) {
+    return commonFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CommonFailure value)? commonFailure,
+  }) {
+    return commonFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CommonFailure value)? commonFailure,
+    required TResult orElse(),
+  }) {
+    if (commonFailure != null) {
+      return commonFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CommonFailure implements OtpLoginFailures {
+  const factory CommonFailure(final CommonFailures failure) =
+      _$CommonFailureImpl;
+
+  @override
+  CommonFailures get failure;
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

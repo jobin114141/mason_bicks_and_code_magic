@@ -1,20 +1,20 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '{{feature.snakeCase()}}_state.dart';
+import 'otp_login_state.dart';
 
-part '{{feature}}_notifer.g.dart';
+part 'otp_login_notifer.g.dart';
 
 @riverpod
-class {{feature.pascalCase()}}Notifier extends _${{feature.pascalCase()}}Notifier {
+class OtpLoginNotifier extends _$OtpLoginNotifier {
   @override
-  {{feature.pascalCase()}}State build() {
-    return {{feature.pascalCase()}}State.initial();
+  OtpLoginState build() {
+    return OtpLoginState.initial();
   }
 
   // Example future method structure
   // Future<void> fetchData() async {
   //   state = state.copyWith(isLoading: true);
   //
-  //   final repo = ref.read({{feature.camelCase()}}RepositoryProvider);
+  //   final repo = ref.read(otpLoginRepositoryProvider);
   //   final result = await repo.getData();
   //
   //   result.fold(
