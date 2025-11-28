@@ -7,4 +7,7 @@ class RouterName {
   static const String mainPage = 'mainPage';
   static const String onBoardingScreen1 = 'onBoardingScreen1';
   static const String onBoardingScreen2 = 'onBoardingScreen2';
+  static const String otpLoginDetailsCollectionPage = 'otpLoginDetailsCollectionPage';
+  static const String otpLoginReg = 'otpLoginReg';
+  
 }

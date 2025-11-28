@@ -6,7 +6,7 @@ part 'failures.freezed.dart';
 @freezed
 class OtpLoginFailures with _$OtpLoginFailures { 
   const factory OtpLoginFailures.commonFailure(CommonFailures failure) = CommonFailure;
-  // const factory OtpLoginFailures.networkFailure([String? message]) = NetworkFailure; 
+  const factory OtpLoginFailures.validationFailed([String? message]) = ValidationFailed; 
 
 }
 

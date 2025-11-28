@@ -20,13 +20,15 @@ FutureOr<String?> handleRedirect(
     return '/onBoardingScreen1';
   }
 
-  if (state.matchedLocation == '/registrationPage' ||
-      state.matchedLocation == '/splashScreen') {
+  if (!isVerified && state.matchedLocation == '/registrationPage' ||
+      state.matchedLocation == '/splashScreen' ||
+      state.matchedLocation == '/otpLoginDetailsCollectionPage' ||
+      state.matchedLocation == '/otpLoginReg') {
     return null;
   }
 
   if (isVerified &&
-      (state.matchedLocation == '/loginPage' || 
+      (state.matchedLocation == '/loginPage' ||
           state.matchedLocation == '/splashScreen' ||
           state.matchedLocation == '/registrationPage' ||
           state.matchedLocation == '/onBoardingScreen1' ||

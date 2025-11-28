@@ -6,7 +6,7 @@ part of 'otp_login_notifer.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$otpLoginNotifierHash() => r'226766d2913d75ae28a636da87ba2eae3eefb555';
+String _$otpLoginNotifierHash() => r'2e27266d97900033c21e50755e9987cfa56e83f7';
 
 /// See also [OtpLoginNotifier].
 @ProviderFor(OtpLoginNotifier)

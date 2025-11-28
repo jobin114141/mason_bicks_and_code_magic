@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$OtpLoginState {
   bool get isLoading => throw _privateConstructorUsedError;
   OtpLoginFailures? get error => throw _privateConstructorUsedError;
+  OtpUserDetails get otpUserDetails => throw _privateConstructorUsedError;
 
   /// Create a copy of OtpLoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -32,7 +33,10 @@ abstract class $OtpLoginStateCopyWith<$Res> {
           OtpLoginState value, $Res Function(OtpLoginState) then) =
       _$OtpLoginStateCopyWithImpl<$Res, OtpLoginState>;
   @useResult
-  $Res call({bool isLoading, OtpLoginFailures? error});
+  $Res call(
+      {bool isLoading, OtpLoginFailures? error, OtpUserDetails otpUserDetails});
+
+  $OtpLoginFailuresCopyWith<$Res>? get error;
 }
 
 /// @nodoc
@@ -52,6 +56,7 @@ class _$OtpLoginStateCopyWithImpl<$Res, $Val extends OtpLoginState>
   $Res call({
     Object? isLoading = null,
     Object? error = freezed,
+    Object? otpUserDetails = null,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
@@ -62,7 +67,25 @@ class _$OtpLoginStateCopyWithImpl<$Res, $Val extends OtpLoginState>
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as OtpLoginFailures?,
+      otpUserDetails: null == otpUserDetails
+          ? _value.otpUserDetails
+          : otpUserDetails // ignore: cast_nullable_to_non_nullable
+              as OtpUserDetails,
     ) as $Val);
+  }
+
+  /// Create a copy of OtpLoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $OtpLoginFailuresCopyWith<$Res>? get error {
+    if (_value.error == null) {
+      return null;
+    }
+
+    return $OtpLoginFailuresCopyWith<$Res>(_value.error!, (value) {
+      return _then(_value.copyWith(error: value) as $Val);
+    });
   }
 }
 
@@ -74,7 +97,11 @@ abstract class _$$OtpLoginStateImplCopyWith<$Res>
       __$$OtpLoginStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isLoading, OtpLoginFailures? error});
+  $Res call(
+      {bool isLoading, OtpLoginFailures? error, OtpUserDetails otpUserDetails});
+
+  @override
+  $OtpLoginFailuresCopyWith<$Res>? get error;
 }
 
 /// @nodoc
@@ -92,6 +119,7 @@ class __$$OtpLoginStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isLoading = null,
     Object? error = freezed,
+    Object? otpUserDetails = null,
   }) {
     return _then(_$OtpLoginStateImpl(
       isLoading: null == isLoading
@@ -102,6 +130,10 @@ class __$$OtpLoginStateImplCopyWithImpl<$Res>
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as OtpLoginFailures?,
+      otpUserDetails: null == otpUserDetails
+          ? _value.otpUserDetails
+          : otpUserDetails // ignore: cast_nullable_to_non_nullable
+              as OtpUserDetails,
     ));
   }
 }
@@ -109,16 +141,21 @@ class __$$OtpLoginStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$OtpLoginStateImpl implements _OtpLoginState {
-  const _$OtpLoginStateImpl({required this.isLoading, required this.error});
+  const _$OtpLoginStateImpl(
+      {required this.isLoading,
+      required this.error,
+      required this.otpUserDetails});
 
   @override
   final bool isLoading;
   @override
   final OtpLoginFailures? error;
+  @override
+  final OtpUserDetails otpUserDetails;
 
   @override
   String toString() {
-    return 'OtpLoginState(isLoading: $isLoading, error: $error)';
+    return 'OtpLoginState(isLoading: $isLoading, error: $error, otpUserDetails: $otpUserDetails)';
   }
 
   @override
@@ -128,12 +165,14 @@ class _$OtpLoginStateImpl implements _OtpLoginState {
             other is _$OtpLoginStateImpl &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.error, error) || other.error == error) &&
+            (identical(other.otpUserDetails, otpUserDetails) ||
+                other.otpUserDetails == otpUserDetails));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, isLoading, const DeepCollectionEquality().hash(error));
+  int get hashCode =>
+      Object.hash(runtimeType, isLoading, error, otpUserDetails);
 
   /// Create a copy of OtpLoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -147,12 +186,15 @@ class _$OtpLoginStateImpl implements _OtpLoginState {
 abstract class _OtpLoginState implements OtpLoginState {
   const factory _OtpLoginState(
       {required final bool isLoading,
-      required final OtpLoginFailures? error}) = _$OtpLoginStateImpl;
+      required final OtpLoginFailures? error,
+      required final OtpUserDetails otpUserDetails}) = _$OtpLoginStateImpl;
 
   @override
   bool get isLoading;
   @override
   OtpLoginFailures? get error;
+  @override
+  OtpUserDetails get otpUserDetails;
 
   /// Create a copy of OtpLoginState
   /// with the given fields replaced by the non-null parameter values.

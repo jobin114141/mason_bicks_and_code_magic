@@ -21,7 +21,7 @@ class OnBoardingScreen1 extends ConsumerWidget {
           const Text(
             OnBoardingPage1Contents.onBoaringAppName,
             style: TextStyle(
-              fontSize: Dimensions.fontSizeMaxLarge,
+              fontSize: Dimensions.fontSizeLarge,
             ),
           ),
           const SizedBox(
@@ -49,7 +49,7 @@ class OnBoardingScreen1 extends ConsumerWidget {
               },
               child: const Text(
                 OnBoardingPage1Contents.firstButtonText,
-                style: TextStyle(fontSize: Dimensions.fontSizeOverLarge),
+                style: TextStyle(fontSize: Dimensions.fontSizeLarge),
               ))
         ],
       ),

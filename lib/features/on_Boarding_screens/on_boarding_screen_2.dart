@@ -23,7 +23,7 @@ class OnBoardingScreen2  extends ConsumerWidget {
           const Text(
             OnBoardingPage2Contents.onBoaringAppName,
             style: TextStyle(
-              fontSize: Dimensions.fontSizeMaxLarge,
+              fontSize: Dimensions.fontSizeLarge,
             ),
           ),
           const SizedBox(

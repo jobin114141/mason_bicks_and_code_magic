@@ -40,8 +40,7 @@ class RegNotifer extends _$RegNotifer {
     final checkUserName = UserName(userName);
     final userNameResult = checkUserName.validate;
     final isUserNameValid = userNameResult.fold((failure) {
-      state =
-          RegState.failure(RegFailures.userValidationError(message: failure));
+      state = RegState.failure(RegFailures.userValidationError(failure));
       return false;
     }, (_) => true);
     if (!isUserNameValid) return;
@@ -50,8 +49,7 @@ class RegNotifer extends _$RegNotifer {
     final checkEmail = EmailAddress(email);
     final emailResult = checkEmail.validate;
     final isEmailValid = emailResult.fold((failure) {
-      state =
-          RegState.failure(RegFailures.emailValidationError(message: failure));
+      state = RegState.failure(RegFailures.emailValidationError(failure));
       return false;
     }, (_) => true);
     if (!isEmailValid) return;
@@ -60,8 +58,7 @@ class RegNotifer extends _$RegNotifer {
     final checkPassword = Password(password);
     final passwordResult = checkPassword.validate;
     final isPasswordValid = passwordResult.fold((failure) {
-      state = RegState.failure(
-          RegFailures.passwordValidationError(message: failure));
+      state = RegState.failure(RegFailures.passwordValidationError(failure));
       return false;
     }, (_) => true);
     if (!isPasswordValid) return;
@@ -69,14 +66,14 @@ class RegNotifer extends _$RegNotifer {
     // Confirm Password Empty check
     if (confirmPassword.isEmpty) {
       state = const RegState.failure(RegFailures.passwordValidationError(
-          message: "Confirm Password cannot be empty"));
+          "Confirm Password cannot be empty"));
       return;
     }
 
     // Confirm Password Match
     if (password != confirmPassword) {
-      state = const RegState.failure(RegFailures.passwordValidationError(
-          message: "Passwords do not match"));
+      state = const RegState.failure(
+          RegFailures.passwordValidationError("Passwords do not match"));
       return;
     }
 
@@ -84,7 +81,7 @@ class RegNotifer extends _$RegNotifer {
     final checkPhone = PhoneNumber(phone);
     final phoneResult = checkPhone.validate;
     final isPhoneValid = phoneResult.fold((failure) {
-      state = RegState.failure(RegFailures.phoneNumber(message: failure));
+      state = RegState.failure(RegFailures.phoneNumber(failure));
       return false;
     }, (_) => true);
     if (!isPhoneValid) return;
@@ -94,7 +91,7 @@ class RegNotifer extends _$RegNotifer {
     final dobResult = checkDob.validate;
     final isDobValid = dobResult.fold((failure) {
       state = RegState.failure(
-        RegFailures.dob(message: failure),
+        RegFailures.dob(failure),
       );
       return false;
     }, (_) => true);
@@ -105,7 +102,7 @@ class RegNotifer extends _$RegNotifer {
     final addressResult = checkAddress.validate;
     final isAddressValid = addressResult.fold((failure) {
       state = RegState.failure(
-        RegFailures.addressValidationError(message: failure),
+        RegFailures.addressValidationError(failure),
       );
       return false;
     }, (_) => true);

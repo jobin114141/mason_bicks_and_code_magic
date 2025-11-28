@@ -8,6 +8,9 @@ import 'package:login_base/features/auth/email_login/application/checkLogin/is_f
 import 'package:login_base/features/auth/email_login/application/checkLogin/is_token_verified_provider.dart';
 import 'package:login_base/features/auth/email_login/application/user_details/user_details_notifer.dart';
 import 'package:login_base/features/auth/email_login/presenatstion/login_page.dart';
+import 'package:login_base/features/auth/otp_login/domain/entities/otp_user_details.dart';
+import 'package:login_base/features/auth/otp_login/presentation/details_collection_page.dart';
+import 'package:login_base/features/auth/otp_login/presentation/otp_login_page.dart';
 import 'package:login_base/features/auth/reg/presentation/reg_page.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
 import 'package:login_base/features/mainpage/presentation/main_page.dart';
@@ -25,9 +28,8 @@ final routeProvider = Provider((ref) {
     initialLocation: '/splashScreen',
     redirect: (context, state) {
       print("Redirecting from: ");
-      print( state.matchedLocation);
+      print(state.matchedLocation);
       return handleRedirect(context, state, ref);
-      
     },
     routes: [
       GoRoute(
@@ -55,6 +57,18 @@ final routeProvider = Provider((ref) {
         path: '/registrationPage',
         builder: (context, state) => const RegPage(),
       ),
+      GoRoute(
+        name: RouterName.otpLoginDetailsCollectionPage,
+        path: '/otpLoginDetailsCollectionPage',
+        builder: (context, state) => const DetailsCollectionPage(),
+      ),
+      GoRoute(
+          name: RouterName.otpLoginReg,
+          path: '/otpLoginReg',
+          builder: (context, state) {
+            final details = state.extra as OtpUserDetails;
+            return OtpLoginPage(details: details);
+          }),
       StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
             return MainPage(navigationShell: navigationShell);

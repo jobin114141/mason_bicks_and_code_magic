@@ -1,17 +1,29 @@
 class Dimensions {
-  static const double fontSizeExtraSmall = 10.0;
+  // static const double fontSizeExtraSmall = 10.0;
   static const double fontSizeSmall = 12.0;
   static const double fontSizeDefault = 14.0;
   static const double fontSizeLarge = 16.0;
   static const double fontSizeExtraLarge = 18.0;
-  static const double fontSizeOverLarge = 24.0;
-  static const double fontSizeMaxLarge = 30.0;
+  // static const double fontSizeOverLarge = 24.0;
+  // static const double fontSizeMaxLarge = 30.0;
 
   static const double paddingSizeExtraSmall = 5.0;
   static const double paddingSizeSmall = 10.0;
   static const double paddingSizeDefault = 15.0;
   static const double paddingSizeLarge = 20.0;
   static const double paddingSizeExtraLarge = 25.0;
+
+  static const double heightExtraSmall = 4;
+  static const double heightSizeSmall = 8;
+  static const double heightSizeDefault = 16;
+  static const double heightSizeLarge = 24;
+  static const double heightSizeExtraLarge = 48;
+
+  static const double widgthExtraSmall = 4;
+  static const double widgthSizeSmall = 8;
+  static const double widgthSizeDefault = 16;
+  static const double widgthSizeLarge = 24;
+  static const double widgthSizeExtraLarge = 48;
 
   static const double radiusSizeSmall = 5.0;
   static const double radiusSizeDefault = 8.0;
@@ -20,5 +32,4 @@ class Dimensions {
 
   //message length
   static const int messageInputLength = 250;
-  static const double webScreenWidth = 1200.0;
 }

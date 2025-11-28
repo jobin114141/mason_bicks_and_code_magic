@@ -16,44 +16,43 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$OtpLoginFailures {
-  CommonFailures get failure => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(CommonFailures failure) commonFailure,
+    required TResult Function(String? message) validationFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(CommonFailures failure)? commonFailure,
+    TResult? Function(String? message)? validationFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(CommonFailures failure)? commonFailure,
+    TResult Function(String? message)? validationFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CommonFailure value) commonFailure,
+    required TResult Function(ValidationFailed value) validationFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CommonFailure value)? commonFailure,
+    TResult? Function(ValidationFailed value)? validationFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CommonFailure value)? commonFailure,
+    TResult Function(ValidationFailed value)? validationFailed,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  /// Create a copy of OtpLoginFailures
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $OtpLoginFailuresCopyWith<OtpLoginFailures> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -62,8 +61,6 @@ abstract class $OtpLoginFailuresCopyWith<$Res> {
   factory $OtpLoginFailuresCopyWith(
           OtpLoginFailures value, $Res Function(OtpLoginFailures) then) =
       _$OtpLoginFailuresCopyWithImpl<$Res, OtpLoginFailures>;
-  @useResult
-  $Res call({CommonFailures failure});
 }
 
 /// @nodoc
@@ -78,29 +75,17 @@ class _$OtpLoginFailuresCopyWithImpl<$Res, $Val extends OtpLoginFailures>
 
   /// Create a copy of OtpLoginFailures
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? failure = freezed,
-  }) {
-    return _then(_value.copyWith(
-      failure: freezed == failure
-          ? _value.failure
-          : failure // ignore: cast_nullable_to_non_nullable
-              as CommonFailures,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$CommonFailureImplCopyWith<$Res>
-    implements $OtpLoginFailuresCopyWith<$Res> {
+abstract class _$$CommonFailureImplCopyWith<$Res> {
   factory _$$CommonFailureImplCopyWith(
           _$CommonFailureImpl value, $Res Function(_$CommonFailureImpl) then) =
       __$$CommonFailureImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({CommonFailures failure});
+
+  $CommonFailuresCopyWith<$Res> get failure;
 }
 
 /// @nodoc
@@ -116,14 +101,24 @@ class __$$CommonFailureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? failure = freezed,
+    Object? failure = null,
   }) {
     return _then(_$CommonFailureImpl(
-      freezed == failure
+      null == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
               as CommonFailures,
     ));
+  }
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CommonFailuresCopyWith<$Res> get failure {
+    return $CommonFailuresCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
   }
 }
 
@@ -145,12 +140,11 @@ class _$CommonFailureImpl implements CommonFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommonFailureImpl &&
-            const DeepCollectionEquality().equals(other.failure, failure));
+            (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
+  int get hashCode => Object.hash(runtimeType, failure);
 
   /// Create a copy of OtpLoginFailures
   /// with the given fields replaced by the non-null parameter values.
@@ -164,6 +158,7 @@ class _$CommonFailureImpl implements CommonFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(CommonFailures failure) commonFailure,
+    required TResult Function(String? message) validationFailed,
   }) {
     return commonFailure(failure);
   }
@@ -172,6 +167,7 @@ class _$CommonFailureImpl implements CommonFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(CommonFailures failure)? commonFailure,
+    TResult? Function(String? message)? validationFailed,
   }) {
     return commonFailure?.call(failure);
   }
@@ -180,6 +176,7 @@ class _$CommonFailureImpl implements CommonFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(CommonFailures failure)? commonFailure,
+    TResult Function(String? message)? validationFailed,
     required TResult orElse(),
   }) {
     if (commonFailure != null) {
@@ -192,6 +189,7 @@ class _$CommonFailureImpl implements CommonFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CommonFailure value) commonFailure,
+    required TResult Function(ValidationFailed value) validationFailed,
   }) {
     return commonFailure(this);
   }
@@ -200,6 +198,7 @@ class _$CommonFailureImpl implements CommonFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CommonFailure value)? commonFailure,
+    TResult? Function(ValidationFailed value)? validationFailed,
   }) {
     return commonFailure?.call(this);
   }
@@ -208,6 +207,7 @@ class _$CommonFailureImpl implements CommonFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CommonFailure value)? commonFailure,
+    TResult Function(ValidationFailed value)? validationFailed,
     required TResult orElse(),
   }) {
     if (commonFailure != null) {
@@ -221,13 +221,153 @@ abstract class CommonFailure implements OtpLoginFailures {
   const factory CommonFailure(final CommonFailures failure) =
       _$CommonFailureImpl;
 
-  @override
   CommonFailures get failure;
 
   /// Create a copy of OtpLoginFailures
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommonFailureImplCopyWith<_$CommonFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ValidationFailedImplCopyWith<$Res> {
+  factory _$$ValidationFailedImplCopyWith(_$ValidationFailedImpl value,
+          $Res Function(_$ValidationFailedImpl) then) =
+      __$$ValidationFailedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? message});
+}
+
+/// @nodoc
+class __$$ValidationFailedImplCopyWithImpl<$Res>
+    extends _$OtpLoginFailuresCopyWithImpl<$Res, _$ValidationFailedImpl>
+    implements _$$ValidationFailedImplCopyWith<$Res> {
+  __$$ValidationFailedImplCopyWithImpl(_$ValidationFailedImpl _value,
+      $Res Function(_$ValidationFailedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_$ValidationFailedImpl(
+      freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ValidationFailedImpl implements ValidationFailed {
+  const _$ValidationFailedImpl([this.message]);
+
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'OtpLoginFailures.validationFailed(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ValidationFailedImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ValidationFailedImplCopyWith<_$ValidationFailedImpl> get copyWith =>
+      __$$ValidationFailedImplCopyWithImpl<_$ValidationFailedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(CommonFailures failure) commonFailure,
+    required TResult Function(String? message) validationFailed,
+  }) {
+    return validationFailed(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(CommonFailures failure)? commonFailure,
+    TResult? Function(String? message)? validationFailed,
+  }) {
+    return validationFailed?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(CommonFailures failure)? commonFailure,
+    TResult Function(String? message)? validationFailed,
+    required TResult orElse(),
+  }) {
+    if (validationFailed != null) {
+      return validationFailed(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CommonFailure value) commonFailure,
+    required TResult Function(ValidationFailed value) validationFailed,
+  }) {
+    return validationFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CommonFailure value)? commonFailure,
+    TResult? Function(ValidationFailed value)? validationFailed,
+  }) {
+    return validationFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CommonFailure value)? commonFailure,
+    TResult Function(ValidationFailed value)? validationFailed,
+    required TResult orElse(),
+  }) {
+    if (validationFailed != null) {
+      return validationFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ValidationFailed implements OtpLoginFailures {
+  const factory ValidationFailed([final String? message]) =
+      _$ValidationFailedImpl;
+
+  String? get message;
+
+  /// Create a copy of OtpLoginFailures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ValidationFailedImplCopyWith<_$ValidationFailedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

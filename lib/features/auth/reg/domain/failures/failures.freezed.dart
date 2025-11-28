@@ -134,7 +134,7 @@ class __$$EmailValidationErrorImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$EmailValidationErrorImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -145,7 +145,7 @@ class __$$EmailValidationErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$EmailValidationErrorImpl implements EmailValidationError {
-  const _$EmailValidationErrorImpl({this.message});
+  const _$EmailValidationErrorImpl([this.message]);
 
   @override
   final String? message;
@@ -272,7 +272,7 @@ class _$EmailValidationErrorImpl implements EmailValidationError {
 }
 
 abstract class EmailValidationError implements RegFailures {
-  const factory EmailValidationError({final String? message}) =
+  const factory EmailValidationError([final String? message]) =
       _$EmailValidationErrorImpl;
 
   String? get message;
@@ -311,7 +311,7 @@ class __$$PasswordValidationErrorImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$PasswordValidationErrorImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -322,7 +322,7 @@ class __$$PasswordValidationErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$PasswordValidationErrorImpl implements PasswordValidationError {
-  const _$PasswordValidationErrorImpl({this.message});
+  const _$PasswordValidationErrorImpl([this.message]);
 
   @override
   final String? message;
@@ -448,7 +448,7 @@ class _$PasswordValidationErrorImpl implements PasswordValidationError {
 }
 
 abstract class PasswordValidationError implements RegFailures {
-  const factory PasswordValidationError({final String? message}) =
+  const factory PasswordValidationError([final String? message]) =
       _$PasswordValidationErrorImpl;
 
   String? get message;
@@ -485,7 +485,7 @@ class __$$phoneNumberImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$phoneNumberImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -496,7 +496,7 @@ class __$$phoneNumberImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$phoneNumberImpl implements phoneNumber {
-  const _$phoneNumberImpl({this.message});
+  const _$phoneNumberImpl([this.message]);
 
   @override
   final String? message;
@@ -621,7 +621,7 @@ class _$phoneNumberImpl implements phoneNumber {
 }
 
 abstract class phoneNumber implements RegFailures {
-  const factory phoneNumber({final String? message}) = _$phoneNumberImpl;
+  const factory phoneNumber([final String? message]) = _$phoneNumberImpl;
 
   String? get message;
 
@@ -657,7 +657,7 @@ class __$$UserValidationErrorImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$UserValidationErrorImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -668,7 +668,7 @@ class __$$UserValidationErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UserValidationErrorImpl implements UserValidationError {
-  const _$UserValidationErrorImpl({this.message});
+  const _$UserValidationErrorImpl([this.message]);
 
   @override
   final String? message;
@@ -794,7 +794,7 @@ class _$UserValidationErrorImpl implements UserValidationError {
 }
 
 abstract class UserValidationError implements RegFailures {
-  const factory UserValidationError({final String? message}) =
+  const factory UserValidationError([final String? message]) =
       _$UserValidationErrorImpl;
 
   String? get message;
@@ -833,7 +833,7 @@ class __$$AddressValidationErrorImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$AddressValidationErrorImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -844,7 +844,7 @@ class __$$AddressValidationErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AddressValidationErrorImpl implements AddressValidationError {
-  const _$AddressValidationErrorImpl({this.message});
+  const _$AddressValidationErrorImpl([this.message]);
 
   @override
   final String? message;
@@ -970,7 +970,7 @@ class _$AddressValidationErrorImpl implements AddressValidationError {
 }
 
 abstract class AddressValidationError implements RegFailures {
-  const factory AddressValidationError({final String? message}) =
+  const factory AddressValidationError([final String? message]) =
       _$AddressValidationErrorImpl;
 
   String? get message;
@@ -1005,7 +1005,7 @@ class __$$dobImplCopyWithImpl<$Res>
     Object? message = freezed,
   }) {
     return _then(_$dobImpl(
-      message: freezed == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1016,7 +1016,7 @@ class __$$dobImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$dobImpl implements dob {
-  const _$dobImpl({this.message});
+  const _$dobImpl([this.message]);
 
   @override
   final String? message;
@@ -1141,7 +1141,7 @@ class _$dobImpl implements dob {
 }
 
 abstract class dob implements RegFailures {
-  const factory dob({final String? message}) = _$dobImpl;
+  const factory dob([final String? message]) = _$dobImpl;
 
   String? get message;
 

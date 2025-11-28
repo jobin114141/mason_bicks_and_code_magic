@@ -43,7 +43,7 @@ class CustomButtonWidget extends StatelessWidget {
               (onPressed == null
                   ? Theme.of(context).hintColor.withOpacity(0.6)
                   : Theme.of(context).primaryColor),
-          minimumSize: Size(Dimensions.webScreenWidth, height ?? 50),
+          // minimumSize: Size(Dimensions.webScreenWidth, height ?? 50),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius)),
           side: borderColor != null

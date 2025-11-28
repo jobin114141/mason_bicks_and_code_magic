@@ -92,7 +92,12 @@ class LoginPage extends HookConsumerWidget {
             onPressed: () {
               context.pushNamed(RouterName.registrationPage);
             },
-            child: const Text("Dont have an Account?Register Now"))
+            child: const Text("Dont have an Account?Register Now")),
+        TextButton(
+            onPressed: () {
+              context.pushNamed(RouterName.otpLoginDetailsCollectionPage);
+            },
+            child: const Text("otp login"))
       ],
     )));
   }
