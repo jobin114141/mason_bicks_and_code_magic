@@ -1,10 +1,8 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-
 import 'package:login_base/core/theme/app_color.dart';
 import 'package:login_base/core/theme/app_text_styles.dart';
 import 'package:login_base/core/theme/dimensions.dart';
@@ -13,17 +11,13 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpLoginPage extends HookConsumerWidget {
   final OtpUserDetails details;
-
   const OtpLoginPage({super.key, required this.details});
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     /// local state for OTP value
     final otpCode = useState("");
-
     /// controller for pin code
     final otpController = useTextEditingController();
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
@@ -44,9 +38,7 @@ class OtpLoginPage extends HookConsumerWidget {
       ),
     );
   }
-
   // ============= WIDGETS ==============
-
   SizedBox _otpCodeInput(
     BuildContext context,
     ValueNotifier<String> otpCode,
@@ -92,10 +84,9 @@ class OtpLoginPage extends HookConsumerWidget {
         textInputAction: TextInputAction.done,
         autoDismissKeyboard: false,
         autoFocus: false,
-      ),
+                                                                                       ),
     );
   }
-
   Center _heading() {
     return Center(
       child: Column(
@@ -109,7 +100,6 @@ class OtpLoginPage extends HookConsumerWidget {
       ),
     );
   }
-
   Center _text1() {
     return Center(
       child: Column(
@@ -123,7 +113,6 @@ class OtpLoginPage extends HookConsumerWidget {
       ),
     );
   }
-
   Center _phoneNumber() {
     return Center(
       child: Column(
