@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_base/features/account/presentation/account_page.dart';
+import 'package:login_base/features/animation_learnings/presentation/animation_homepage.dart';
 import 'package:login_base/features/auth/email_login/application/checkLogin/is_first_launch_provider.dart';
 import 'package:login_base/features/auth/email_login/application/checkLogin/is_token_verified_provider.dart';
 import 'package:login_base/features/auth/email_login/application/user_details/user_details_notifer.dart';
@@ -32,6 +33,7 @@ final routeProvider = Provider((ref) {
       return handleRedirect(context, state, ref);
     },
     routes: [
+
       GoRoute(
         name: RouterName.splashScreen,
         path: '/splashScreen',
@@ -62,6 +64,12 @@ final routeProvider = Provider((ref) {
         path: '/otpLoginDetailsCollectionPage',
         builder: (context, state) => const DetailsCollectionPage(),
       ),
+        GoRoute(
+        name: RouterName.animationHomepage,
+        path: '/AnimationHomepage',
+        builder: (context, state) => const AnimationHomepage(),
+      ),
+      
       GoRoute(
           name: RouterName.otpLoginReg,
           path: '/otpLoginReg',

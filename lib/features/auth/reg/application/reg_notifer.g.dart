@@ -6,7 +6,7 @@ part of 'reg_notifer.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$regNotiferHash() => r'a3e0753fef5db639cb52abff0358d0adb96d9257';
+String _$regNotiferHash() => r'c57515f680be18ac3de01bb7bd19283e026d5874';
 
 /// See also [RegNotifer].
 @ProviderFor(RegNotifer)

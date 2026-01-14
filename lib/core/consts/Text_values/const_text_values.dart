@@ -17,3 +17,4 @@ class OnBoardingPage2Contents {
   static const String firstButtonText = "Continue with Login";
   static const String secondButtonText = "Skip";
 }
+

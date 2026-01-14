@@ -1,26 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'otp_login_notifer.dart';
+part of 'animation_home_page_notifer.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$otpLoginNotifierHash() => r'78385b6635bc9c98afff80d57275a1200fc32aa1';
+String _$animationHomePageNotifierHash() =>
+    r'c559c56bd0ad0ae823ff97b6acb03e17eefad821';
 
-/// See also [OtpLoginNotifier].
-@ProviderFor(OtpLoginNotifier)
-final otpLoginNotifierProvider =
-    AutoDisposeNotifierProvider<OtpLoginNotifier, OtpLoginState>.internal(
-  OtpLoginNotifier.new,
-  name: r'otpLoginNotifierProvider',
+/// See also [AnimationHomePageNotifier].
+@ProviderFor(AnimationHomePageNotifier)
+final animationHomePageNotifierProvider = AutoDisposeNotifierProvider<
+    AnimationHomePageNotifier, AnimationHomeState>.internal(
+  AnimationHomePageNotifier.new,
+  name: r'animationHomePageNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$otpLoginNotifierHash,
+      : _$animationHomePageNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$OtpLoginNotifier = AutoDisposeNotifier<OtpLoginState>;
+typedef _$AnimationHomePageNotifier = AutoDisposeNotifier<AnimationHomeState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

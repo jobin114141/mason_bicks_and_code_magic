@@ -9,5 +9,5 @@ class RouterName {
   static const String onBoardingScreen2 = 'onBoardingScreen2';
   static const String otpLoginDetailsCollectionPage = 'otpLoginDetailsCollectionPage';
   static const String otpLoginReg = 'otpLoginReg';
-  
+  static const String animationHomepage = 'AnimationHomepage'; 
 }

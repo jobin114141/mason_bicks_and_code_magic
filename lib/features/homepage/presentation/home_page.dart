@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:login_base/core/configs/routes/router_name.dart';
 import 'package:login_base/features/homepage/application/homepage_notifer.dart';
 import 'package:login_base/features/homepage/application/homepage_state.dart';
 import 'package:login_base/features/homepage/presentation/widgets/product_list.dart';
@@ -14,9 +16,9 @@ class HomePage extends HookConsumerWidget {
 
     // Fetch products when page loads
     useEffect(() {
-      Future.microtask(() {
-        ref.read(homePageNotifierProvider.notifier).getProducts();
-      });
+      // Future.microtask(() {
+      //   ref.read(homePageNotifierProvider.notifier).getProducts();
+      // });
       return null;
     }, []);
 
@@ -37,6 +39,13 @@ class HomePage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text("Home Page")),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+       // navigate to diffrent pages
+        context.pushNamed(RouterName.animationHomepage);
+        },
+        child: const Icon(Icons.add),
+      ),
       body: Column(
         children: [
           Text("products available: ${state.products.length}"),
