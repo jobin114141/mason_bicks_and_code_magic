@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:login_base/core/configs/routes/router_name.dart';
 import 'package:login_base/features/homepage/application/homepage_notifer.dart';
 import 'package:login_base/features/homepage/application/homepage_state.dart';
+import 'package:login_base/features/homepage/presentation/widgets/circular_menu.dart';
 import 'package:login_base/features/homepage/presentation/widgets/product_list.dart';
 
 class HomePage extends HookConsumerWidget {
@@ -39,12 +40,48 @@ class HomePage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text("Home Page")),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-       // navigate to diffrent pages
-        context.pushNamed(RouterName.animationHomepage);
-        },
-        child: const Icon(Icons.add),
+      floatingActionButton: Stack(
+        children: [
+          CircularMenu(
+            radius: 90,
+            alignment: CircularMenuAlignment.left,
+            backgroundColor: Colors.black,
+            iconColor: Colors.white,
+            animationDuration: const Duration(milliseconds: 500),
+            items: [
+              CircularMenuItemData(
+                icon: Icons.home,
+                color: Colors.green,
+                iconColor: Colors.white,
+                iconSize: 30,
+                enableCloseAnimation: false,
+                onTap: () {
+                  context.pushNamed(RouterName.animationHomepage);
+                  print("Home tapped");
+                },
+              ),
+              CircularMenuItemData(
+                iconColor: Colors.white,
+                iconSize: 30,
+                elevation: 2,
+                color: Colors.orange,
+                icon: Icons.search,
+                onTap: () {
+                  print("Search tapped");
+                },
+              ),
+              CircularMenuItemData(
+                color: Colors.red,
+                elevation: 5,
+                iconColor: Colors.white,
+                icon: Icons.settings,
+                onTap: () {
+                  print("Settings tapped");
+                },
+              ),
+            ],
+          ),
+        ],
       ),
       body: Column(
         children: [
